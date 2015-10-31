@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="views" nsURI="http://www.example.org/views" nsPrefix="views">
+  <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startView" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewGroup">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
+        eType="#//View" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="welcomeViewGroup" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassIndexView" eSuperTypes="#//View"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ClassOperationView" eSuperTypes="#//View">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewelements" upperBound="-1"
+        eType="#//ViewElements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewElements" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyElements" eSuperTypes="#//ViewElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AssociatiomElements" eSuperTypes="#//ViewElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//PropertyElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DateTimePicker" eSuperTypes="#//PropertyElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Selectiom" eSuperTypes="#//PropertyElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonConditions" eSuperTypes="#//VisibilityCondition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeConditions" eSuperTypes="#//VisibilityCondition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Listt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Createe"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Readd"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Deletee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Updatee"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementGroups">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewelements" upperBound="-1"
+        eType="#//ViewElements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visibilitycondition" upperBound="-1"
+        eType="#//VisibilityCondition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComparisonCondition">
+    <eLiterals name="hidden"/>
+    <eLiterals name="shown" value="1"/>
+    <eLiterals name="enabled" value="2"/>
+    <eLiterals name="disabled" value="3"/>
+    <eLiterals name="none" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CompositeConditions">
+    <eLiterals name="AND"/>
+    <eLiterals name="OR" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VisibilityCondition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="conditionID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>
