@@ -26,8 +26,11 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ViewGroup/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ViewGroup/views"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ViewGroup/welcomeViewGroup"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ViewGroup/layout"/>
     </genClasses>
-    <genClasses ecoreClass="views.ecore#//ClassIndexView"/>
+    <genClasses ecoreClass="views.ecore#//ClassIndexView">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ClassIndexView/link"/>
+    </genClasses>
     <genClasses ecoreClass="views.ecore#//ClassOperationView">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/viewelements"/>
     </genClasses>
@@ -36,13 +39,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ViewElements/label"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//PropertyElements"/>
-    <genClasses ecoreClass="views.ecore#//AssociatiomElements"/>
+    <genClasses ecoreClass="views.ecore#//AssociatiomElements">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//AssociatiomElements/link"/>
+    </genClasses>
     <genClasses ecoreClass="views.ecore#//Text"/>
     <genClasses ecoreClass="views.ecore#//DateTimePicker"/>
-    <genClasses ecoreClass="views.ecore#//Selectiom"/>
+    <genClasses ecoreClass="views.ecore#//Selection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Selection/selectionitems?"/>
+    </genClasses>
     <genClasses ecoreClass="views.ecore#//ComparisonConditions"/>
     <genClasses ecoreClass="views.ecore#//CompositeConditions"/>
-    <genClasses ecoreClass="views.ecore#//Listt"/>
+    <genClasses ecoreClass="views.ecore#//List"/>
     <genClasses ecoreClass="views.ecore#//Createe"/>
     <genClasses ecoreClass="views.ecore#//Readd"/>
     <genClasses ecoreClass="views.ecore#//Deletee"/>
@@ -50,9 +57,21 @@
     <genClasses ecoreClass="views.ecore#//ElementGroups">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ElementGroups/viewelements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ElementGroups/visibilitycondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ElementGroups/layout"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//VisibilityCondition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//VisibilityCondition/conditionID"/>
     </genClasses>
+    <genClasses ecoreClass="views.ecore#//long?"/>
+    <genClasses ecoreClass="views.ecore#//short?"/>
+    <genClasses ecoreClass="views.ecore#//selectionItems"/>
+    <genClasses ecoreClass="views.ecore#//Layout"/>
+    <genClasses ecoreClass="views.ecore#//link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//link/label"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Table/columns"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//Column?"/>
   </genPackages>
 </genmodel:GenModel>
