@@ -16,6 +16,19 @@
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditions.1/AND"/>
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditions.1/OR"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//TextType">
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/SHORT"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/LONG"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//DateType">
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//DateType/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//DateType/TIME"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//DateType/DATETIME"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//LayoutType">
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//LayoutType/HORIZONTAL"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//LayoutType/VERTICAL"/>
+    </genEnums>
     <genClasses ecoreClass="views.ecore#//View">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//View/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//View/header"/>
@@ -37,41 +50,51 @@
     <genClasses ecoreClass="views.ecore#//ViewElements">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ViewElements/elementID"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ViewElements/label"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ViewElements/visibilitycondition"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//PropertyElements"/>
-    <genClasses ecoreClass="views.ecore#//AssociatiomElements">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//AssociatiomElements/link"/>
+    <genClasses ecoreClass="views.ecore#//AssociationElements">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//AssociationElements/link"/>
     </genClasses>
-    <genClasses ecoreClass="views.ecore#//Text"/>
-    <genClasses ecoreClass="views.ecore#//DateTimePicker"/>
+    <genClasses ecoreClass="views.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Text/textType"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//DateTimePicker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//DateTimePicker/dateType"/>
+    </genClasses>
     <genClasses ecoreClass="views.ecore#//Selection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Selection/selectionitems?"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Selection/selectionitems"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//ComparisonConditions"/>
-    <genClasses ecoreClass="views.ecore#//CompositeConditions"/>
+    <genClasses ecoreClass="views.ecore#//CompositeConditions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//CompositeConditions/compositeType"/>
+    </genClasses>
     <genClasses ecoreClass="views.ecore#//List"/>
-    <genClasses ecoreClass="views.ecore#//Createe"/>
-    <genClasses ecoreClass="views.ecore#//Readd"/>
-    <genClasses ecoreClass="views.ecore#//Deletee"/>
-    <genClasses ecoreClass="views.ecore#//Updatee"/>
+    <genClasses ecoreClass="views.ecore#//Create"/>
+    <genClasses ecoreClass="views.ecore#//Read"/>
+    <genClasses ecoreClass="views.ecore#//Delete"/>
+    <genClasses ecoreClass="views.ecore#//Update"/>
     <genClasses ecoreClass="views.ecore#//ElementGroups">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ElementGroups/viewelements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ElementGroups/visibilitycondition"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ElementGroups/layout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ElementGroups/header"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//VisibilityCondition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//VisibilityCondition/conditionID"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//VisibilityCondition/conditionType"/>
     </genClasses>
-    <genClasses ecoreClass="views.ecore#//long?"/>
-    <genClasses ecoreClass="views.ecore#//short?"/>
-    <genClasses ecoreClass="views.ecore#//selectionItems"/>
-    <genClasses ecoreClass="views.ecore#//Layout"/>
-    <genClasses ecoreClass="views.ecore#//link">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//link/label"/>
+    <genClasses ecoreClass="views.ecore#//SelectionItems"/>
+    <genClasses ecoreClass="views.ecore#//Layout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Layout/layoutType"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//Link">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Link/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Link/label"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Table/columns"/>
     </genClasses>
-    <genClasses ecoreClass="views.ecore#//Column?"/>
+    <genClasses ecoreClass="views.ecore#//Column"/>
   </genPackages>
 </genmodel:GenModel>
