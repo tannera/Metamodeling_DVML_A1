@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="views" nsURI="http://www.example.org/views" nsPrefix="views">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="FirstLetterInViewTitleIsUpperCase" value="self.name.at(1).matches('[A-Z]')"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -9,6 +23,13 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ViewGroup">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ExactlyOneWelcomeViewGroupExists FirstLetterInViewGroupIsUpperCase"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ExactlyOneWelcomeViewGroupExists" value="ViewGroup.allInstances() -> select(f | f.welcomeViewGroup = true) -> size() = 1"/>
+      <details key="FirstLetterInViewGroupIsUpperCase" value="self.name.at(1).matches('[A-Z]')"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="views" upperBound="-1"
         eType="#//View" containment="true"/>
@@ -49,7 +70,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComparisonConditions" eSuperTypes="#//VisibilityCondition"/>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeConditions" eSuperTypes="#//VisibilityCondition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="compositeType" eType="#//CompositeConditions.1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="compositeType" eType="#//CompositeConditionsType"
         defaultValueLiteral="AND"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//AssociationElements"/>
@@ -73,7 +94,7 @@
     <eLiterals name="disabled" value="3"/>
     <eLiterals name="none" value="4"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="CompositeConditions">
+  <eClassifiers xsi:type="ecore:EEnum" name="CompositeConditionsType">
     <eLiterals name="AND"/>
     <eLiterals name="OR" value="1"/>
   </eClassifiers>
@@ -86,7 +107,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelectionItems"/>
   <eClassifiers xsi:type="ecore:EClass" name="Layout">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layoutType" eType="#//LayoutType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="layoutType" eType="#//LayoutType"
+        defaultValueLiteral="HORIZONTAL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//ClassOperationView"/>

@@ -12,9 +12,9 @@
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonCondition/disabled"/>
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonCondition/none"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//CompositeConditions.1">
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditions.1/AND"/>
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditions.1/OR"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//CompositeConditionsType">
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditionsType/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditionsType/OR"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//TextType">
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/SHORT"/>
