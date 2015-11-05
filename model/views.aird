@@ -8,6 +8,8 @@
   <semanticResources>../ocl_tests/Constraint2TestInvalid.xmi</semanticResources>
   <semanticResources>../ocl_tests/Constraint3TestValid.xmi</semanticResources>
   <semanticResources>../ocl_tests/Constraint3TestInvalid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint4TestValid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint4TestInvalid.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_kqQuIH1_EeWkJtUBs9a44A">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_kyeO8H1_EeWkJtUBs9a44A" name="views">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_kyeO8X1_EeWkJtUBs9a44A" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -891,7 +893,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_0d9eIH2EEeWkJtUBs9a44A" name="startView : EBoolean = false" tooltipText="">
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_0d9eIH2EEeWkJtUBs9a44A" name="startView : EBoolean = true" tooltipText="">
           <target xmi:type="ecore:EAttribute" href="views.ecore#//View/startView"/>
           <semanticElements xmi:type="ecore:EAttribute" href="views.ecore#//View/startView"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_4lGlUICHEeW9Gs6jKxc4tQ" labelAlignment="LEFT" description="_vZ-5kICHEeW9Gs6jKxc4tQ">
