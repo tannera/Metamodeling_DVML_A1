@@ -17,8 +17,8 @@
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//CompositeConditionsType/OR"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//TextType">
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/SHORT"/>
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/LONG"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/UserDefinedDataType"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//TextType/Enumeration"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//DateType">
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//DateType/DATE"/>
@@ -46,6 +46,12 @@
     </genClasses>
     <genClasses ecoreClass="views.ecore#//ClassOperationView">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/viewelements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/elementgroups"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/link"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/create"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/read"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/update"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ClassOperationView/delete"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//ViewElements">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ViewElements/elementID"/>
@@ -64,6 +70,7 @@
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Selection">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Selection/selectionitems"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Selection/type"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//ComparisonConditions"/>
     <genClasses ecoreClass="views.ecore#//CompositeConditions">
@@ -89,12 +96,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Layout/layoutType"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Link">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Link/target"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Link/label"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Link/classoperationview"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Table">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Table/columns"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Column"/>
+    <genClasses ecoreClass="views.ecore#//ViewModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//ViewModel/viewgroup"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//EnumerationLiteralItem"/>
+    <genClasses ecoreClass="views.ecore#//Long"/>
+    <genClasses ecoreClass="views.ecore#//Short"/>
   </genPackages>
 </genmodel:GenModel>

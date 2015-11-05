@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="views" nsURI="http://www.example.org/views" nsPrefix="views">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore#/"/>
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
     <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
@@ -11,10 +11,11 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase"/>
+      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase NameInViewIsNotEmpty"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="FirstLetterInViewTitleIsUpperCase" value="self.name.at(1).matches('[A-Z]')"/>
+      <details key="NameInViewIsNotEmpty" value="self.name.size() &lt;> 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -41,32 +42,42 @@
   <eClassifiers xsi:type="ecore:EClass" name="ClassIndexView" eSuperTypes="#//View">
     <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//Link"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClassOperationView" abstract="true"
-      eSuperTypes="#//View">
+  <eClassifiers xsi:type="ecore:EClass" name="ClassOperationView" eSuperTypes="#//View">
     <eStructuralFeatures xsi:type="ecore:EReference" name="viewelements" upperBound="-1"
         eType="#//ViewElements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementgroups" upperBound="-1"
+        eType="#//ElementGroups" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" eType="#//Link" eOpposite="#//Link/classoperationview"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="create" eType="#//Create"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="read" eType="#//Read"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="update" eType="#//Update"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="delete" eType="#//Delete"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ViewElements" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="elementID" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"
-        iD="true"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="visibilitycondition" eType="#//VisibilityCondition"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PropertyElements" eSuperTypes="#//ViewElements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="AssociationElements" eSuperTypes="#//ViewElements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//Link"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PropertyElements" abstract="true" eSuperTypes="#//ViewElements"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AssociationElements" abstract="true"
+      eSuperTypes="#//ViewElements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" lowerBound="1" upperBound="-1"
+        eType="#//Link"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//PropertyElements">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textType" eType="#//TextType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="textType" lowerBound="1"
+        eType="#//TextType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateTimePicker" eSuperTypes="#//PropertyElements">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateType" eType="#//DateType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateType" lowerBound="1"
+        eType="#//DateType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Selection" eSuperTypes="#//PropertyElements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionitems" upperBound="-1"
-        eType="#//SelectionItems" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectionitems" lowerBound="1"
+        upperBound="-1" eType="#//SelectionItems" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//TextType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComparisonConditions" eSuperTypes="#//VisibilityCondition"/>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeConditions" eSuperTypes="#//VisibilityCondition">
@@ -74,10 +85,10 @@
         defaultValueLiteral="AND"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//AssociationElements"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Create" eSuperTypes="#//ClassOperationView"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Read" eSuperTypes="#//ClassOperationView"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Delete" eSuperTypes="#//ClassOperationView"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Update" eSuperTypes="#//ClassOperationView"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Create"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Read"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delete"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Update"/>
   <eClassifiers xsi:type="ecore:EClass" name="ElementGroups">
     <eStructuralFeatures xsi:type="ecore:EReference" name="viewelements" upperBound="-1"
         eType="#//ViewElements" containment="true"/>
@@ -111,17 +122,18 @@
         defaultValueLiteral="HORIZONTAL"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//ClassOperationView"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="classoperationview" eType="#//ClassOperationView"
+        eOpposite="#//ClassOperationView/link"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//AssociationElements">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" upperBound="-1"
-        eType="#//Column" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="columns" lowerBound="1"
+        upperBound="-1" eType="#//Column" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Column"/>
   <eClassifiers xsi:type="ecore:EEnum" name="TextType">
-    <eLiterals name="SHORT"/>
-    <eLiterals name="LONG" value="1"/>
+    <eLiterals name="UserDefinedDataType"/>
+    <eLiterals name="Enumeration" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DateType">
     <eLiterals name="DATE"/>
@@ -132,4 +144,11 @@
     <eLiterals name="HORIZONTAL"/>
     <eLiterals name="VERTICAL" value="1"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewgroup" upperBound="-1"
+        eType="#//ViewGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EnumerationLiteralItem" eSuperTypes="#//SelectionItems"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Long" eSuperTypes="#//Text"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Short" eSuperTypes="#//Text"/>
 </ecore:EPackage>
