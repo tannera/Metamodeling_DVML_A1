@@ -123,36 +123,32 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Class/property"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Class/superclass"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Class/association"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Class/name"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Enumeration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Enumeration/literal"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Enumeration/name"/>
     </genClasses>
-    <genClasses ecoreClass="views.ecore#//DataType">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//DataType/name"/>
-    </genClasses>
+    <genClasses ecoreClass="views.ecore#//DataType"/>
     <genClasses ecoreClass="views.ecore#//Property">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/LowerBound"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/UpperBound"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Property/class"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Literal">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Literal/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Literal/value"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Association">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Association/associationend"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Association/name"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//AssociationEnd">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//AssociationEnd/class"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AssociationEnd/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AssociationEnd/navigable"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AssociationEnd/Composed"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AssociationEnd/LowerBound"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//AssociationEnd/UpperBound"/>
+    </genClasses>
+    <genClasses ecoreClass="views.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//NamedElement/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

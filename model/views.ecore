@@ -159,53 +159,50 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="enumeration" upperBound="-1"
         eType="#//Enumeration" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Class">
+  <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
         upperBound="-1" eType="#//Property" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superclass" eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="association" upperBound="-1"
         eType="#//Association"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Enumeration">
+  <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="literal" lowerBound="1"
         upperBound="-1" eType="#//Literal" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Property">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PropertyType"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
-        defaultValueLiteral="0"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UpperBound" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"
-        defaultValueLiteral="1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//PropertyType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LowerBound" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="0"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UpperBound" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" eType="#//Class"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PropertyType">
     <eLiterals name="Class"/>
     <eLiterals name="DataType" value="1"/>
     <eLiterals name="Enumeration" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Literal">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Association">
+  <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="associationend" lowerBound="2"
         upperBound="2" eType="#//AssociationEnd" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AssociationEnd">
+  <eClassifiers xsi:type="ecore:EClass" name="AssociationEnd" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigable" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Composed" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Boolean"
         defaultValueLiteral="false"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LowerBound" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UpperBound" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="LowerBound" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="UpperBound" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
   </eClassifiers>
 </ecore:EPackage>
