@@ -14,6 +14,13 @@
   <semanticResources>../ocl_tests/Constraint3Valid.xmi</semanticResources>
   <semanticResources>../ocl_tests/Constraint8Invalid.xmi</semanticResources>
   <semanticResources>../ocl_tests/Constraint8Valid.xmi</semanticResources>
+  <semanticResources>Class.xmi</semanticResources>
+  <semanticResources>Class1.xmi</semanticResources>
+  <semanticResources>DomainModel.xmi</semanticResources>
+  <semanticResources>DomainModel1.xmi</semanticResources>
+  <semanticResources>DomainModel2.xmi</semanticResources>
+  <semanticResources>DomainModel3.xmi</semanticResources>
+  <semanticResources>DomainModel4.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_kqQuIH1_EeWkJtUBs9a44A">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_kyeO8H1_EeWkJtUBs9a44A" name="views">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_kyeO8X1_EeWkJtUBs9a44A" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -2543,9 +2550,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_M-pMIIV8EeWKjZrsMElkwg" name="id : EBoolean = false" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="views.ecore#//Property/id"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="views.ecore#//Property/id"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_M-pMIIV8EeWKjZrsMElkwg" name="isID : EBoolean = false" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="views.ecore#//Property/isID"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="views.ecore#//Property/isID"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_OueLAIV8EeWKjZrsMElkwg" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>
