@@ -2,7 +2,12 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-<extension  point="org.eclipse.emf.ecp.view.model.provider.xmi.file">
-<file filePath="model/ViewModel.view"/>
-</extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated views -->
+      <package
+            uri="http://www.example.org/views"
+            class="views.ViewsPackage"
+            genModel="model/views.genmodel"/>
+   </extension>
+
 </plugin>

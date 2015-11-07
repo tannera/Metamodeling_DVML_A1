@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:DomainModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:views="http://www.example.org/views"
+    xsi:schemaLocation="http://www.example.org/views ../model/views.ecore">
+  <class name="Example 1"
+      superclass="//@class.1">
+    <property/>
+  </class>
+  <class name="Example 2">
+    <property/>
+  </class>
+</views:DomainModel>
