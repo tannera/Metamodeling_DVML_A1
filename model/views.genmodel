@@ -133,6 +133,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/LowerBound"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/UpperBound"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//Property/class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Property/id"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//Literal">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Literal/value"/>
