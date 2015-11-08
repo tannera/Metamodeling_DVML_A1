@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:DomainModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:views="http://www.example.org/views"
+    xsi:schemaLocation="http://www.example.org/views ../model/views.ecore">
+  <class name="Example">
+    <property
+        name="Example"
+        type="DataType"
+        class="//@class.0"
+        isID="true"/>
+    <association
+        name="Example">
+      <associationend
+          name="Example"
+          class="//@class.1"
+          navigable="true"/>
+      <associationend
+          name="Example"
+          class="//@class.0"/>
+    </association>
+  </class>
+  <class name="Example 2">
+    <property
+        type="DataType"
+        class="//@class.1"
+        isID="true"/>
+  </class>
+</views:DomainModel>

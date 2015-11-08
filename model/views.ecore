@@ -12,10 +12,11 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase"/>
+      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase NameInViewIsNotEmpty"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="FirstLetterInViewTitleIsUpperCase" value="self.name.at(1).matches('[A-Z]')"/>
+      <details key="NameInViewIsNotEmpty" value="self.name.size() &lt;> 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -77,12 +78,6 @@
         eType="#//TextType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateTimePicker" eSuperTypes="#//PropertyElements">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="DateIsValid"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="DateIsValid" value="self.dateType = PropertyType::DataType"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateType" lowerBound="1"
         eType="#//DateType"/>
   </eClassifiers>
@@ -185,18 +180,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="ClassNotInheritSelf ExactlyOneClassID classPropertyIDLowerBoundOne"/>
+      <details key="constraints" value="ClassNotInheritSelf ExactlyOneClassID"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="ClassNotInheritSelf" value="self.superclass->excludes(self)"/>
       <details key="ExactlyOneClassID" value="self.Property -> select(k | k.isID=true)-> size() = 1"/>
-      <details key="classPropertyIDLowerBoundOne" value="(self.property->select(p | p.isID)).LowerBound = 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
         upperBound="-1" eType="#//Property" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="superclass" eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="association" upperBound="-1"
-        eType="#//Association"/>
+        eType="#//Association" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Enumeration" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="literal" lowerBound="1"
@@ -234,6 +228,12 @@
         upperBound="2" eType="#//AssociationEnd" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssociationEnd" eSuperTypes="#//NamedElement">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="associationEndUpperGreaterThanLower"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="associationEndUpperGreaterThanLower" value="self.LowerBound &lt;= self.UpperBound and (self.LowerBound >= 0 and self.UpperBound > 0)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
         defaultValueLiteral="false"/>
