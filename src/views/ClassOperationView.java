@@ -16,14 +16,11 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link views.ClassOperationView#getViewelements <em>Viewelements</em>}</li>
  *   <li>{@link views.ClassOperationView#getElementgroups <em>Elementgroups</em>}</li>
  *   <li>{@link views.ClassOperationView#getLink <em>Link</em>}</li>
- *   <li>{@link views.ClassOperationView#getCreate <em>Create</em>}</li>
- *   <li>{@link views.ClassOperationView#getRead <em>Read</em>}</li>
- *   <li>{@link views.ClassOperationView#getUpdate <em>Update</em>}</li>
- *   <li>{@link views.ClassOperationView#getDelete <em>Delete</em>}</li>
+ *   <li>{@link views.ClassOperationView#getLayout <em>Layout</em>}</li>
  * </ul>
  *
  * @see views.ViewsPackage#getClassOperationView()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ClassOperationView extends View {
@@ -60,7 +57,8 @@ public interface ClassOperationView extends View {
 	EList<ElementGroups> getElementgroups();
 
 	/**
-	 * Returns the value of the '<em><b>Link</b></em>' reference.
+	 * Returns the value of the '<em><b>Link</b></em>' reference list.
+	 * The list contents are of type {@link views.Link}.
 	 * It is bidirectional and its opposite is '{@link views.Link#getClassoperationview <em>Classoperationview</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -68,127 +66,38 @@ public interface ClassOperationView extends View {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Link</em>' reference.
-	 * @see #setLink(Link)
+	 * @return the value of the '<em>Link</em>' reference list.
 	 * @see views.ViewsPackage#getClassOperationView_Link()
 	 * @see views.Link#getClassoperationview
 	 * @model opposite="classoperationview"
 	 * @generated
 	 */
-	Link getLink();
+	EList<Link> getLink();
 
 	/**
-	 * Sets the value of the '{@link views.ClassOperationView#getLink <em>Link</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Link</em>' reference.
-	 * @see #getLink()
-	 * @generated
-	 */
-	void setLink(Link value);
-
-	/**
-	 * Returns the value of the '<em><b>Create</b></em>' reference.
+	 * Returns the value of the '<em><b>Layout</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Create</em>' reference isn't clear,
+	 * If the meaning of the '<em>Layout</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Create</em>' reference.
-	 * @see #setCreate(Create)
-	 * @see views.ViewsPackage#getClassOperationView_Create()
-	 * @model
+	 * @return the value of the '<em>Layout</em>' reference.
+	 * @see #setLayout(Layout)
+	 * @see views.ViewsPackage#getClassOperationView_Layout()
+	 * @model required="true"
 	 * @generated
 	 */
-	Create getCreate();
+	Layout getLayout();
 
 	/**
-	 * Sets the value of the '{@link views.ClassOperationView#getCreate <em>Create</em>}' reference.
+	 * Sets the value of the '{@link views.ClassOperationView#getLayout <em>Layout</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Create</em>' reference.
-	 * @see #getCreate()
+	 * @param value the new value of the '<em>Layout</em>' reference.
+	 * @see #getLayout()
 	 * @generated
 	 */
-	void setCreate(Create value);
-
-	/**
-	 * Returns the value of the '<em><b>Read</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Read</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Read</em>' reference.
-	 * @see #setRead(Read)
-	 * @see views.ViewsPackage#getClassOperationView_Read()
-	 * @model
-	 * @generated
-	 */
-	Read getRead();
-
-	/**
-	 * Sets the value of the '{@link views.ClassOperationView#getRead <em>Read</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Read</em>' reference.
-	 * @see #getRead()
-	 * @generated
-	 */
-	void setRead(Read value);
-
-	/**
-	 * Returns the value of the '<em><b>Update</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Update</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Update</em>' reference.
-	 * @see #setUpdate(Update)
-	 * @see views.ViewsPackage#getClassOperationView_Update()
-	 * @model
-	 * @generated
-	 */
-	Update getUpdate();
-
-	/**
-	 * Sets the value of the '{@link views.ClassOperationView#getUpdate <em>Update</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Update</em>' reference.
-	 * @see #getUpdate()
-	 * @generated
-	 */
-	void setUpdate(Update value);
-
-	/**
-	 * Returns the value of the '<em><b>Delete</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Delete</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Delete</em>' reference.
-	 * @see #setDelete(Delete)
-	 * @see views.ViewsPackage#getClassOperationView_Delete()
-	 * @model
-	 * @generated
-	 */
-	Delete getDelete();
-
-	/**
-	 * Sets the value of the '{@link views.ClassOperationView#getDelete <em>Delete</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Delete</em>' reference.
-	 * @see #getDelete()
-	 * @generated
-	 */
-	void setDelete(Delete value);
+	void setLayout(Layout value);
 
 } // ClassOperationView

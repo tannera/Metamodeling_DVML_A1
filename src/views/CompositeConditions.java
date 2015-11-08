@@ -2,6 +2,8 @@
  */
 package views;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,10 +15,12 @@ package views;
  * </p>
  * <ul>
  *   <li>{@link views.CompositeConditions#getCompositeType <em>Composite Type</em>}</li>
+ *   <li>{@link views.CompositeConditions#getVisibilitycondition <em>Visibilitycondition</em>}</li>
  * </ul>
  *
  * @see views.ViewsPackage#getCompositeConditions()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='ComposedConditionTypesAreEqual'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot ComposedConditionTypesAreEqual='self.visibilitycondition -> forAll(c | c.conditionType = self.conditionType)'"
  * @generated
  */
 public interface CompositeConditions extends VisibilityCondition {
@@ -49,5 +53,21 @@ public interface CompositeConditions extends VisibilityCondition {
 	 * @generated
 	 */
 	void setCompositeType(CompositeConditionsType value);
+
+	/**
+	 * Returns the value of the '<em><b>Visibilitycondition</b></em>' containment reference list.
+	 * The list contents are of type {@link views.VisibilityCondition}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Visibilitycondition</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Visibilitycondition</em>' containment reference list.
+	 * @see views.ViewsPackage#getCompositeConditions_Visibilitycondition()
+	 * @model containment="true" lower="2" upper="2"
+	 * @generated
+	 */
+	EList<VisibilityCondition> getVisibilitycondition();
 
 } // CompositeConditions

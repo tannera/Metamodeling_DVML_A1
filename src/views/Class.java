@@ -19,7 +19,8 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see views.ViewsPackage#getClass_()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='ClassNotInheritSelf ExactlyOneClassID'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot ClassNotInheritSelf='self.superclass->excludes(self)' ExactlyOneClassID=' (self.Property -> select(k | k.isID=true)-> size() = 1) or (self.superclass -> size() > 0)'"
  * @generated
  */
 public interface Class extends NamedElement {
@@ -66,7 +67,7 @@ public interface Class extends NamedElement {
 	void setSuperclass(Class value);
 
 	/**
-	 * Returns the value of the '<em><b>Association</b></em>' reference list.
+	 * Returns the value of the '<em><b>Association</b></em>' containment reference list.
 	 * The list contents are of type {@link views.Association}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -74,9 +75,9 @@ public interface Class extends NamedElement {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Association</em>' reference list.
+	 * @return the value of the '<em>Association</em>' containment reference list.
 	 * @see views.ViewsPackage#getClass_Association()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Association> getAssociation();

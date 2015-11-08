@@ -2,8 +2,6 @@
  */
 package views;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Update</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Update extends EObject {
+public interface Update extends ClassOperationView {
 } // Update

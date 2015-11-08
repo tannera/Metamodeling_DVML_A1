@@ -108,7 +108,7 @@ public class AssociationEndImpl extends NamedElementImpl implements AssociationE
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int UPPER_BOUND_EDEFAULT = 0;
+	protected static final int UPPER_BOUND_EDEFAULT = 1;
 
 	/**
 	 * The cached value of the '{@link #getUpperBound() <em>Upper Bound</em>}' attribute.

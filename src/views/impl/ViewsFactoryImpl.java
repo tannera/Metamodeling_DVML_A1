@@ -14,10 +14,10 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import views.Association;
 import views.AssociationEnd;
 import views.ClassIndexView;
-import views.ClassOperationView;
 import views.Column;
 import views.ComparisonCondition;
 import views.ComparisonConditions;
+import views.ComparisonValue;
 import views.CompositeConditions;
 import views.CompositeConditionsType;
 import views.Create;
@@ -94,7 +94,6 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 		switch (eClass.getClassifierID()) {
 			case ViewsPackage.VIEW_GROUP: return createViewGroup();
 			case ViewsPackage.CLASS_INDEX_VIEW: return createClassIndexView();
-			case ViewsPackage.CLASS_OPERATION_VIEW: return createClassOperationView();
 			case ViewsPackage.TEXT: return createText();
 			case ViewsPackage.DATE_TIME_PICKER: return createDateTimePicker();
 			case ViewsPackage.SELECTION: return createSelection();
@@ -113,8 +112,6 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 			case ViewsPackage.COLUMN: return createColumn();
 			case ViewsPackage.VIEW_MODEL: return createViewModel();
 			case ViewsPackage.ENUMERATION_LITERAL_ITEM: return createEnumerationLiteralItem();
-			case ViewsPackage.LONG: return createLong();
-			case ViewsPackage.SHORT: return createShort();
 			case ViewsPackage.DOMAIN_MODEL: return createDomainModel();
 			case ViewsPackage.CLASS: return createClass();
 			case ViewsPackage.ENUMERATION: return createEnumeration();
@@ -148,6 +145,8 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 				return createLayoutTypeFromString(eDataType, initialValue);
 			case ViewsPackage.PROPERTY_TYPE:
 				return createPropertyTypeFromString(eDataType, initialValue);
+			case ViewsPackage.COMPARISON_VALUE:
+				return createComparisonValueFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -173,6 +172,8 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 				return convertLayoutTypeToString(eDataType, instanceValue);
 			case ViewsPackage.PROPERTY_TYPE:
 				return convertPropertyTypeToString(eDataType, instanceValue);
+			case ViewsPackage.COMPARISON_VALUE:
+				return convertComparisonValueToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -196,16 +197,6 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 	public ClassIndexView createClassIndexView() {
 		ClassIndexViewImpl classIndexView = new ClassIndexViewImpl();
 		return classIndexView;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ClassOperationView createClassOperationView() {
-		ClassOperationViewImpl classOperationView = new ClassOperationViewImpl();
-		return classOperationView;
 	}
 
 	/**
@@ -386,26 +377,6 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 	public EnumerationLiteralItem createEnumerationLiteralItem() {
 		EnumerationLiteralItemImpl enumerationLiteralItem = new EnumerationLiteralItemImpl();
 		return enumerationLiteralItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public views.Long createLong() {
-		LongImpl long_ = new LongImpl();
-		return long_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public views.Short createShort() {
-		ShortImpl short_ = new ShortImpl();
-		return short_;
 	}
 
 	/**
@@ -605,6 +576,26 @@ public class ViewsFactoryImpl extends EFactoryImpl implements ViewsFactory {
 	 * @generated
 	 */
 	public String convertPropertyTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComparisonValue createComparisonValueFromString(EDataType eDataType, String initialValue) {
+		ComparisonValue result = ComparisonValue.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertComparisonValueToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

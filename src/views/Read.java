@@ -2,8 +2,6 @@
  */
 package views;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Read</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Read extends EObject {
+public interface Read extends ClassOperationView {
 } // Read

@@ -16,10 +16,12 @@ package views;
  *   <li>{@link views.Property#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link views.Property#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link views.Property#getClass_ <em>Class</em>}</li>
+ *   <li>{@link views.Property#isIsID <em>Is ID</em>}</li>
  * </ul>
  *
  * @see views.ViewsPackage#getProperty()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='LowerBoundMaxOne LowerBoundMinZero UpperBoundEqualsOne ClassPropertyTypeIsValid'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot LowerBoundMaxOne='self.LowerBound <= 1' LowerBoundMinZero='self.LowerBound >= 0' UpperBoundEqualsOne='self.UpperBound = 1' ClassPropertyTypeIsValid='self.type = PropertyType::DataType or self.type = PropertyType::Enumeration'"
  * @generated
  */
 public interface Property extends NamedElement {
@@ -64,7 +66,7 @@ public interface Property extends NamedElement {
 	 * @return the value of the '<em>Lower Bound</em>' attribute.
 	 * @see #setLowerBound(int)
 	 * @see views.ViewsPackage#getProperty_LowerBound()
-	 * @model default="0" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
+	 * @model default="0" required="true"
 	 * @generated
 	 */
 	int getLowerBound();
@@ -91,7 +93,7 @@ public interface Property extends NamedElement {
 	 * @return the value of the '<em>Upper Bound</em>' attribute.
 	 * @see #setUpperBound(int)
 	 * @see views.ViewsPackage#getProperty_UpperBound()
-	 * @model default="1" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
+	 * @model default="1" required="true"
 	 * @generated
 	 */
 	int getUpperBound();
@@ -117,7 +119,7 @@ public interface Property extends NamedElement {
 	 * @return the value of the '<em>Class</em>' reference.
 	 * @see #setClass(views.Class)
 	 * @see views.ViewsPackage#getProperty_Class()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	views.Class getClass_();
@@ -131,5 +133,31 @@ public interface Property extends NamedElement {
 	 * @generated
 	 */
 	void setClass(views.Class value);
+
+	/**
+	 * Returns the value of the '<em><b>Is ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Is ID</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is ID</em>' attribute.
+	 * @see #setIsID(boolean)
+	 * @see views.ViewsPackage#getProperty_IsID()
+	 * @model
+	 * @generated
+	 */
+	boolean isIsID();
+
+	/**
+	 * Sets the value of the '{@link views.Property#isIsID <em>Is ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is ID</em>' attribute.
+	 * @see #isIsID()
+	 * @generated
+	 */
+	void setIsID(boolean value);
 
 } // Property

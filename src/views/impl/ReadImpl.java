@@ -3,9 +3,6 @@
 package views.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import views.Read;
 import views.ViewsPackage;
 
@@ -16,7 +13,7 @@ import views.ViewsPackage;
  *
  * @generated
  */
-public class ReadImpl extends MinimalEObjectImpl.Container implements Read {
+public class ReadImpl extends ClassOperationViewImpl implements Read {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -5,6 +5,5 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:views="http://www.example.org/views"
     xsi:schemaLocation="http://www.example.org/views ../model/views.ecore"
-    name="ExampleName">
-  <layout href="../src/Layout.xmi#/"/>
-</views:ViewGroup>
+    name="ValidName"
+    welcomeViewGroup="true"/>

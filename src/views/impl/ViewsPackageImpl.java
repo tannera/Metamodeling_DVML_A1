@@ -21,6 +21,7 @@ import views.ClassOperationView;
 import views.Column;
 import views.ComparisonCondition;
 import views.ComparisonConditions;
+import views.ComparisonValue;
 import views.CompositeConditions;
 import views.CompositeConditionsType;
 import views.Create;
@@ -252,20 +253,6 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass longEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass shortEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass domainModelEClass = null;
 
 	/**
@@ -365,6 +352,13 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * @generated
 	 */
 	private EEnum propertyTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum comparisonValueEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -525,15 +519,6 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getViewGroup_Layout() {
-		return (EReference)viewGroupEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getClassIndexView() {
 		return classIndexViewEClass;
 	}
@@ -588,35 +573,8 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getClassOperationView_Create() {
+	public EReference getClassOperationView_Layout() {
 		return (EReference)classOperationViewEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getClassOperationView_Read() {
-		return (EReference)classOperationViewEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getClassOperationView_Update() {
-		return (EReference)classOperationViewEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getClassOperationView_Delete() {
-		return (EReference)classOperationViewEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -705,6 +663,33 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getText_Format() {
+		return (EAttribute)textEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getText_IsShort() {
+		return (EAttribute)textEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getText_IsLong() {
+		return (EAttribute)textEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDateTimePicker() {
 		return dateTimePickerEClass;
 	}
@@ -716,6 +701,15 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 */
 	public EAttribute getDateTimePicker_DateType() {
 		return (EAttribute)dateTimePickerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDateTimePicker_Format() {
+		return (EAttribute)dateTimePickerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -759,6 +753,33 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getComparisonConditions_Value() {
+		return (EAttribute)comparisonConditionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getComparisonConditions_Comparison() {
+		return (EAttribute)comparisonConditionsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComparisonConditions_Viewelements() {
+		return (EReference)comparisonConditionsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompositeConditions() {
 		return compositeConditionsEClass;
 	}
@@ -770,6 +791,15 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 */
 	public EAttribute getCompositeConditions_CompositeType() {
 		return (EAttribute)compositeConditionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getCompositeConditions_Visibilitycondition() {
+		return (EReference)compositeConditionsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -903,6 +933,15 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSelectionItems_SelectionValue() {
+		return (EAttribute)selectionItemsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLayout() {
 		return layoutEClass;
 	}
@@ -995,24 +1034,6 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 */
 	public EClass getEnumerationLiteralItem() {
 		return enumerationLiteralItemEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLong() {
-		return longEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getShort() {
-		return shortEClass;
 	}
 
 	/**
@@ -1157,6 +1178,15 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 */
 	public EReference getProperty_Class() {
 		return (EReference)propertyEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getProperty_IsID() {
+		return (EAttribute)propertyEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1326,6 +1356,15 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getComparisonValue() {
+		return comparisonValueEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ViewsFactory getViewsFactory() {
 		return (ViewsFactory)getEFactoryInstance();
 	}
@@ -1359,7 +1398,6 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		createEAttribute(viewGroupEClass, VIEW_GROUP__NAME);
 		createEReference(viewGroupEClass, VIEW_GROUP__VIEWS);
 		createEAttribute(viewGroupEClass, VIEW_GROUP__WELCOME_VIEW_GROUP);
-		createEReference(viewGroupEClass, VIEW_GROUP__LAYOUT);
 
 		classIndexViewEClass = createEClass(CLASS_INDEX_VIEW);
 		createEReference(classIndexViewEClass, CLASS_INDEX_VIEW__LINK);
@@ -1368,10 +1406,7 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__VIEWELEMENTS);
 		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__ELEMENTGROUPS);
 		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__LINK);
-		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__CREATE);
-		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__READ);
-		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__UPDATE);
-		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__DELETE);
+		createEReference(classOperationViewEClass, CLASS_OPERATION_VIEW__LAYOUT);
 
 		viewElementsEClass = createEClass(VIEW_ELEMENTS);
 		createEAttribute(viewElementsEClass, VIEW_ELEMENTS__ELEMENT_ID);
@@ -1385,18 +1420,26 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 
 		textEClass = createEClass(TEXT);
 		createEAttribute(textEClass, TEXT__TEXT_TYPE);
+		createEAttribute(textEClass, TEXT__FORMAT);
+		createEAttribute(textEClass, TEXT__IS_SHORT);
+		createEAttribute(textEClass, TEXT__IS_LONG);
 
 		dateTimePickerEClass = createEClass(DATE_TIME_PICKER);
 		createEAttribute(dateTimePickerEClass, DATE_TIME_PICKER__DATE_TYPE);
+		createEAttribute(dateTimePickerEClass, DATE_TIME_PICKER__FORMAT);
 
 		selectionEClass = createEClass(SELECTION);
 		createEReference(selectionEClass, SELECTION__SELECTIONITEMS);
 		createEAttribute(selectionEClass, SELECTION__TYPE);
 
 		comparisonConditionsEClass = createEClass(COMPARISON_CONDITIONS);
+		createEAttribute(comparisonConditionsEClass, COMPARISON_CONDITIONS__VALUE);
+		createEAttribute(comparisonConditionsEClass, COMPARISON_CONDITIONS__COMPARISON);
+		createEReference(comparisonConditionsEClass, COMPARISON_CONDITIONS__VIEWELEMENTS);
 
 		compositeConditionsEClass = createEClass(COMPOSITE_CONDITIONS);
 		createEAttribute(compositeConditionsEClass, COMPOSITE_CONDITIONS__COMPOSITE_TYPE);
+		createEReference(compositeConditionsEClass, COMPOSITE_CONDITIONS__VISIBILITYCONDITION);
 
 		listEClass = createEClass(LIST);
 
@@ -1419,6 +1462,7 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		createEAttribute(visibilityConditionEClass, VISIBILITY_CONDITION__CONDITION_TYPE);
 
 		selectionItemsEClass = createEClass(SELECTION_ITEMS);
+		createEAttribute(selectionItemsEClass, SELECTION_ITEMS__SELECTION_VALUE);
 
 		layoutEClass = createEClass(LAYOUT);
 		createEAttribute(layoutEClass, LAYOUT__LAYOUT_TYPE);
@@ -1436,10 +1480,6 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		createEReference(viewModelEClass, VIEW_MODEL__VIEWGROUP);
 
 		enumerationLiteralItemEClass = createEClass(ENUMERATION_LITERAL_ITEM);
-
-		longEClass = createEClass(LONG);
-
-		shortEClass = createEClass(SHORT);
 
 		domainModelEClass = createEClass(DOMAIN_MODEL);
 		createEReference(domainModelEClass, DOMAIN_MODEL__CLASS);
@@ -1461,6 +1501,7 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		createEAttribute(propertyEClass, PROPERTY__LOWER_BOUND);
 		createEAttribute(propertyEClass, PROPERTY__UPPER_BOUND);
 		createEReference(propertyEClass, PROPERTY__CLASS);
+		createEAttribute(propertyEClass, PROPERTY__IS_ID);
 
 		literalEClass = createEClass(LITERAL);
 		createEAttribute(literalEClass, LITERAL__VALUE);
@@ -1485,6 +1526,7 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		dateTypeEEnum = createEEnum(DATE_TYPE);
 		layoutTypeEEnum = createEEnum(LAYOUT_TYPE);
 		propertyTypeEEnum = createEEnum(PROPERTY_TYPE);
+		comparisonValueEEnum = createEEnum(COMPARISON_VALUE);
 	}
 
 	/**
@@ -1528,10 +1570,12 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		comparisonConditionsEClass.getESuperTypes().add(this.getVisibilityCondition());
 		compositeConditionsEClass.getESuperTypes().add(this.getVisibilityCondition());
 		listEClass.getESuperTypes().add(this.getAssociationElements());
+		createEClass.getESuperTypes().add(this.getClassOperationView());
+		readEClass.getESuperTypes().add(this.getClassOperationView());
+		deleteEClass.getESuperTypes().add(this.getClassOperationView());
+		updateEClass.getESuperTypes().add(this.getClassOperationView());
 		tableEClass.getESuperTypes().add(this.getAssociationElements());
 		enumerationLiteralItemEClass.getESuperTypes().add(this.getSelectionItems());
-		longEClass.getESuperTypes().add(this.getText());
-		shortEClass.getESuperTypes().add(this.getText());
 		classEClass.getESuperTypes().add(this.getNamedElement());
 		enumerationEClass.getESuperTypes().add(this.getNamedElement());
 		dataTypeEClass.getESuperTypes().add(this.getNamedElement());
@@ -1551,19 +1595,15 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		initEAttribute(getViewGroup_Name(), ecorePackage.getEString(), "name", null, 1, 1, ViewGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getViewGroup_Views(), this.getView(), null, "views", null, 0, -1, ViewGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getViewGroup_WelcomeViewGroup(), ecorePackage.getEBoolean(), "welcomeViewGroup", "false", 0, 1, ViewGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getViewGroup_Layout(), this.getLayout(), null, "layout", null, 1, 1, ViewGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(classIndexViewEClass, ClassIndexView.class, "ClassIndexView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClassIndexView_Link(), this.getLink(), null, "link", null, 0, -1, ClassIndexView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(classOperationViewEClass, ClassOperationView.class, "ClassOperationView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(classOperationViewEClass, ClassOperationView.class, "ClassOperationView", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClassOperationView_Viewelements(), this.getViewElements(), null, "viewelements", null, 0, -1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClassOperationView_Elementgroups(), this.getElementGroups(), null, "elementgroups", null, 0, -1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassOperationView_Link(), this.getLink(), this.getLink_Classoperationview(), "link", null, 0, 1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassOperationView_Create(), this.getCreate(), null, "create", null, 0, 1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassOperationView_Read(), this.getRead(), null, "read", null, 0, 1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassOperationView_Update(), this.getUpdate(), null, "update", null, 0, 1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClassOperationView_Delete(), this.getDelete(), null, "delete", null, 0, 1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClassOperationView_Link(), this.getLink(), this.getLink_Classoperationview(), "link", null, 0, -1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClassOperationView_Layout(), this.getLayout(), null, "layout", null, 1, 1, ClassOperationView.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(viewElementsEClass, ViewElements.class, "ViewElements", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getViewElements_ElementID(), ecorePackage.getEString(), "elementID", null, 1, 1, ViewElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1573,22 +1613,30 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		initEClass(propertyElementsEClass, PropertyElements.class, "PropertyElements", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(associationElementsEClass, AssociationElements.class, "AssociationElements", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getAssociationElements_Link(), this.getLink(), null, "link", null, 1, -1, AssociationElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssociationElements_Link(), this.getLink(), null, "link", null, 1, 1, AssociationElements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(textEClass, Text.class, "Text", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getText_TextType(), this.getTextType(), "textType", null, 1, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getText_Format(), ecorePackage.getEString(), "format", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getText_IsShort(), ecorePackage.getEBoolean(), "isShort", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getText_IsLong(), ecorePackage.getEBoolean(), "isLong", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dateTimePickerEClass, DateTimePicker.class, "DateTimePicker", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDateTimePicker_DateType(), this.getDateType(), "dateType", null, 1, 1, DateTimePicker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDateTimePicker_Format(), ecorePackage.getEString(), "format", null, 0, 1, DateTimePicker.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectionEClass, Selection.class, "Selection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSelection_Selectionitems(), this.getSelectionItems(), null, "selectionitems", null, 1, -1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getSelection_Type(), this.getTextType(), "type", null, 1, 1, Selection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(comparisonConditionsEClass, ComparisonConditions.class, "ComparisonConditions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getComparisonConditions_Value(), ecorePackage.getEString(), "value", null, 1, 1, ComparisonConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComparisonConditions_Comparison(), this.getComparisonValue(), "comparison", null, 0, 1, ComparisonConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComparisonConditions_Viewelements(), this.getViewElements(), null, "viewelements", null, 0, 1, ComparisonConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(compositeConditionsEClass, CompositeConditions.class, "CompositeConditions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getCompositeConditions_CompositeType(), this.getCompositeConditionsType(), "compositeType", "AND", 0, 1, CompositeConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompositeConditions_Visibilitycondition(), this.getVisibilityCondition(), null, "visibilitycondition", null, 2, 2, CompositeConditions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(listEClass, List.class, "List", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1611,9 +1659,10 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		initEAttribute(getVisibilityCondition_ConditionType(), this.getComparisonCondition(), "conditionType", "shown", 0, 1, VisibilityCondition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectionItemsEClass, SelectionItems.class, "SelectionItems", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSelectionItems_SelectionValue(), ecorePackage.getEString(), "SelectionValue", null, 0, 1, SelectionItems.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLayout_LayoutType(), this.getLayoutType(), "layoutType", "HORIZONTAL", 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLayout_LayoutType(), this.getLayoutType(), "layoutType", "HORIZONTAL", 1, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(linkEClass, Link.class, "Link", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLink_Label(), ecorePackage.getEString(), "label", null, 1, 1, Link.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1629,10 +1678,6 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 
 		initEClass(enumerationLiteralItemEClass, EnumerationLiteralItem.class, "EnumerationLiteralItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(longEClass, views.Long.class, "Long", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(shortEClass, views.Short.class, "Short", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(domainModelEClass, DomainModel.class, "DomainModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDomainModel_Class(), this.getClass_(), null, "class", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDomainModel_Datatype(), this.getDataType(), null, "datatype", null, 0, -1, DomainModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1641,7 +1686,7 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		initEClass(classEClass, views.Class.class, "Class", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getClass_Property(), this.getProperty(), null, "property", null, 1, -1, views.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getClass_Superclass(), this.getClass_(), null, "superclass", null, 0, 1, views.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getClass_Association(), this.getAssociation(), null, "association", null, 0, -1, views.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClass_Association(), this.getAssociation(), null, "association", null, 0, -1, views.Class.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(enumerationEClass, Enumeration.class, "Enumeration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnumeration_Literal(), this.getLiteral(), null, "literal", null, 1, -1, Enumeration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1650,25 +1695,26 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 
 		initEClass(propertyEClass, Property.class, "Property", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getProperty_Type(), this.getPropertyType(), "type", null, 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProperty_LowerBound(), theXMLTypePackage.getInt(), "LowerBound", "0", 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProperty_UpperBound(), theXMLTypePackage.getInt(), "UpperBound", "1", 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProperty_Class(), this.getClass_(), null, "class", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProperty_LowerBound(), ecorePackage.getEInt(), "LowerBound", "0", 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProperty_UpperBound(), ecorePackage.getEInt(), "UpperBound", "1", 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProperty_Class(), this.getClass_(), null, "class", null, 1, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProperty_IsID(), ecorePackage.getEBoolean(), "isID", null, 0, 1, Property.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(literalEClass, Literal.class, "Literal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getLiteral_Value(), theXMLTypePackage.getString(), "value", null, 1, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getLiteral_Value(), ecorePackage.getEString(), "value", null, 1, 1, Literal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociation_Associationend(), this.getAssociationEnd(), null, "associationend", null, 2, 2, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(associationEndEClass, AssociationEnd.class, "AssociationEnd", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAssociationEnd_Class(), this.getClass_(), null, "class", null, 1, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociationEnd_Navigable(), theXMLTypePackage.getBoolean(), "navigable", "false", 0, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociationEnd_Composed(), theXMLTypePackage.getBoolean(), "Composed", "false", 0, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociationEnd_LowerBound(), theXMLTypePackage.getInt(), "LowerBound", null, 1, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getAssociationEnd_UpperBound(), theXMLTypePackage.getInt(), "UpperBound", null, 1, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssociationEnd_Navigable(), ecorePackage.getEBoolean(), "navigable", "false", 0, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssociationEnd_Composed(), ecorePackage.getEBoolean(), "Composed", "false", 0, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssociationEnd_LowerBound(), theXMLTypePackage.getInt(), "LowerBound", "0", 1, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAssociationEnd_UpperBound(), theXMLTypePackage.getInt(), "UpperBound", "1", 1, 1, AssociationEnd.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getNamedElement_Name(), theXMLTypePackage.getString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparisonConditionEEnum, ComparisonCondition.class, "ComparisonCondition");
@@ -1700,6 +1746,11 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		addEEnumLiteral(propertyTypeEEnum, PropertyType.DATA_TYPE);
 		addEEnumLiteral(propertyTypeEEnum, PropertyType.ENUMERATION);
 
+		initEEnum(comparisonValueEEnum, ComparisonValue.class, "ComparisonValue");
+		addEEnumLiteral(comparisonValueEEnum, ComparisonValue.EQUALS);
+		addEEnumLiteral(comparisonValueEEnum, ComparisonValue.LESS_THAN);
+		addEEnumLiteral(comparisonValueEEnum, ComparisonValue.GREATER_THAN);
+
 		// Create resource
 		createResource(eNS_URI);
 
@@ -1724,7 +1775,8 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		  (this, 
 		   source, 
 		   new String[] {
-			 "ecore", "http://www.eclipse.org/emf/2002/Ecore"
+			 "ecore", "http://www.eclipse.org/emf/2002/Ecore",
+			 "ecore.xml.type", "http://www.eclipse.org/emf/2003/XMLType"
 		   });
 	}
 
@@ -1755,6 +1807,36 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		   source, 
 		   new String[] {
 			 "constraints", "ExactlyOneWelcomeViewGroupExists FirstLetterInViewGroupIsUpperCase"
+		   });	
+		addAnnotation
+		  (viewElementsEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "ElementIDIsUnique"
+		   });	
+		addAnnotation
+		  (compositeConditionsEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "ComposedConditionTypesAreEqual"
+		   });	
+		addAnnotation
+		  (classEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "ClassNotInheritSelf ExactlyOneClassID"
+		   });	
+		addAnnotation
+		  (propertyEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "LowerBoundMaxOne LowerBoundMinZero UpperBoundEqualsOne ClassPropertyTypeIsValid"
+		   });	
+		addAnnotation
+		  (associationEndEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "associationEndUpperGreaterThanLower"
 		   });
 	}
 
@@ -1779,6 +1861,40 @@ public class ViewsPackageImpl extends EPackageImpl implements ViewsPackage {
 		   new String[] {
 			 "ExactlyOneWelcomeViewGroupExists", "ViewGroup.allInstances() -> select(f | f.welcomeViewGroup = true) -> size() = 1",
 			 "FirstLetterInViewGroupIsUpperCase", "self.name.at(1).matches(\'[A-Z]\')"
+		   });	
+		addAnnotation
+		  (viewElementsEClass, 
+		   source, 
+		   new String[] {
+			 "ElementIDIsUnique", "ViewElements.allInstances() -> select(n | n.elementID = self.elementID) ->excluding(self) ->isEmpty()"
+		   });	
+		addAnnotation
+		  (compositeConditionsEClass, 
+		   source, 
+		   new String[] {
+			 "ComposedConditionTypesAreEqual", "self.visibilitycondition -> forAll(c | c.conditionType = self.conditionType)"
+		   });	
+		addAnnotation
+		  (classEClass, 
+		   source, 
+		   new String[] {
+			 "ClassNotInheritSelf", "self.superclass->excludes(self)",
+			 "ExactlyOneClassID", " (self.Property -> select(k | k.isID=true)-> size() = 1) or (self.superclass -> size() > 0)"
+		   });	
+		addAnnotation
+		  (propertyEClass, 
+		   source, 
+		   new String[] {
+			 "LowerBoundMaxOne", "self.LowerBound <= 1",
+			 "LowerBoundMinZero", "self.LowerBound >= 0",
+			 "UpperBoundEqualsOne", "self.UpperBound = 1",
+			 "ClassPropertyTypeIsValid", "self.type = PropertyType::DataType or self.type = PropertyType::Enumeration"
+		   });	
+		addAnnotation
+		  (associationEndEClass, 
+		   source, 
+		   new String[] {
+			 "associationEndUpperGreaterThanLower", "self.LowerBound <= self.UpperBound or self.UpperBound = -1 and (self.LowerBound >= 0 and self.UpperBound > 0 or self.UpperBound = -1)"
 		   });
 	}
 

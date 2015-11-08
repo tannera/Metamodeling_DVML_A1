@@ -20,7 +20,8 @@ package views;
  * </ul>
  *
  * @see views.ViewsPackage#getAssociationEnd()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='associationEndUpperGreaterThanLower'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot associationEndUpperGreaterThanLower='self.LowerBound <= self.UpperBound or self.UpperBound = -1 and (self.LowerBound >= 0 and self.UpperBound > 0 or self.UpperBound = -1)'"
  * @generated
  */
 public interface AssociationEnd extends NamedElement {
@@ -62,7 +63,7 @@ public interface AssociationEnd extends NamedElement {
 	 * @return the value of the '<em>Navigable</em>' attribute.
 	 * @see #setNavigable(boolean)
 	 * @see views.ViewsPackage#getAssociationEnd_Navigable()
-	 * @model default="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model default="false"
 	 * @generated
 	 */
 	boolean isNavigable();
@@ -89,7 +90,7 @@ public interface AssociationEnd extends NamedElement {
 	 * @return the value of the '<em>Composed</em>' attribute.
 	 * @see #setComposed(boolean)
 	 * @see views.ViewsPackage#getAssociationEnd_Composed()
-	 * @model default="false" dataType="org.eclipse.emf.ecore.xml.type.Boolean"
+	 * @model default="false"
 	 * @generated
 	 */
 	boolean isComposed();
@@ -106,6 +107,7 @@ public interface AssociationEnd extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Lower Bound</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Lower Bound</em>' attribute isn't clear,
@@ -115,7 +117,7 @@ public interface AssociationEnd extends NamedElement {
 	 * @return the value of the '<em>Lower Bound</em>' attribute.
 	 * @see #setLowerBound(int)
 	 * @see views.ViewsPackage#getAssociationEnd_LowerBound()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
+	 * @model default="0" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
 	 * @generated
 	 */
 	int getLowerBound();
@@ -132,6 +134,7 @@ public interface AssociationEnd extends NamedElement {
 
 	/**
 	 * Returns the value of the '<em><b>Upper Bound</b></em>' attribute.
+	 * The default value is <code>"1"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Upper Bound</em>' attribute isn't clear,
@@ -141,7 +144,7 @@ public interface AssociationEnd extends NamedElement {
 	 * @return the value of the '<em>Upper Bound</em>' attribute.
 	 * @see #setUpperBound(int)
 	 * @see views.ViewsPackage#getAssociationEnd_UpperBound()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
+	 * @model default="1" dataType="org.eclipse.emf.ecore.xml.type.Int" required="true"
 	 * @generated
 	 */
 	int getUpperBound();

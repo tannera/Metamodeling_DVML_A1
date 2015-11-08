@@ -195,24 +195,32 @@ public class ViewsSwitch<T> extends Switch<T> {
 			case ViewsPackage.CREATE: {
 				Create create = (Create)theEObject;
 				T result = caseCreate(create);
+				if (result == null) result = caseClassOperationView(create);
+				if (result == null) result = caseView(create);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ViewsPackage.READ: {
 				Read read = (Read)theEObject;
 				T result = caseRead(read);
+				if (result == null) result = caseClassOperationView(read);
+				if (result == null) result = caseView(read);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ViewsPackage.DELETE: {
 				Delete delete = (Delete)theEObject;
 				T result = caseDelete(delete);
+				if (result == null) result = caseClassOperationView(delete);
+				if (result == null) result = caseView(delete);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ViewsPackage.UPDATE: {
 				Update update = (Update)theEObject;
 				T result = caseUpdate(update);
+				if (result == null) result = caseClassOperationView(update);
+				if (result == null) result = caseView(update);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -270,24 +278,6 @@ public class ViewsSwitch<T> extends Switch<T> {
 				EnumerationLiteralItem enumerationLiteralItem = (EnumerationLiteralItem)theEObject;
 				T result = caseEnumerationLiteralItem(enumerationLiteralItem);
 				if (result == null) result = caseSelectionItems(enumerationLiteralItem);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ViewsPackage.LONG: {
-				views.Long long_ = (views.Long)theEObject;
-				T result = caseLong(long_);
-				if (result == null) result = caseText(long_);
-				if (result == null) result = casePropertyElements(long_);
-				if (result == null) result = caseViewElements(long_);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ViewsPackage.SHORT: {
-				views.Short short_ = (views.Short)theEObject;
-				T result = caseShort(short_);
-				if (result == null) result = caseText(short_);
-				if (result == null) result = casePropertyElements(short_);
-				if (result == null) result = caseViewElements(short_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -743,36 +733,6 @@ public class ViewsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseEnumerationLiteralItem(EnumerationLiteralItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Long</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Long</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLong(views.Long object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Short</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Short</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseShort(views.Short object) {
 		return null;
 	}
 

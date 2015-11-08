@@ -1,0 +1,15 @@
+- Constraint 1 - FirstLetterInViewGroupIsUpperCase
+- Constraint 2 - ExactlyOneWelcomeViewGroupExists
+- Constraint 3 - ElementIDIsUnique
+- Constraint 4 - ComposedConditionTypesAreEqual 
+- Constraint 5 - LowerBound only 0 and 1 are allowed, and upperBound only 1 is allowed (LowerBoundMaxOne, LowerBoundMinZero, UpperBoundEqualsOne)
+- Constraint 6 - ClassPropertyTypeIsValid
+- Constraint 7 - AssociationEndUpperGreaterThanLower
+- Constraint 8 - ClassNotInheritSelf
+
+Other Invariant OCL Constraints: 
+- NameInViewIsNotEmpty
+- FirstLetterInViewTitleIsUpperCase
+- ExactlyOneClassID 
+
+We spent a lot of time on the 'Property that is ID, has to have LowerBound & UpperBound = 1' OCL, but failed and gave up after spending a day on it. 

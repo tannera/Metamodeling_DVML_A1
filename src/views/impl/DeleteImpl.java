@@ -3,9 +3,6 @@
 package views.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import views.Delete;
 import views.ViewsPackage;
 
@@ -16,7 +13,7 @@ import views.ViewsPackage;
  *
  * @generated
  */
-public class DeleteImpl extends MinimalEObjectImpl.Container implements Delete {
+public class DeleteImpl extends ClassOperationViewImpl implements Delete {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

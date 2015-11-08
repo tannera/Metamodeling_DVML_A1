@@ -20,6 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *
  * @see views.ViewsPackage#getViewElements()
  * @model abstract="true"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore constraints='ElementIDIsUnique'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot ElementIDIsUnique='ViewElements.allInstances() -> select(n | n.elementID = self.elementID) ->excluding(self) ->isEmpty()'"
  * @generated
  */
 public interface ViewElements extends EObject {

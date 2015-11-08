@@ -17,8 +17,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import views.Layout;
 import views.View;
 import views.ViewGroup;
 import views.ViewsPackage;
@@ -34,7 +32,6 @@ import views.ViewsPackage;
  *   <li>{@link views.impl.ViewGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link views.impl.ViewGroupImpl#getViews <em>Views</em>}</li>
  *   <li>{@link views.impl.ViewGroupImpl#isWelcomeViewGroup <em>Welcome View Group</em>}</li>
- *   <li>{@link views.impl.ViewGroupImpl#getLayout <em>Layout</em>}</li>
  * </ul>
  *
  * @generated
@@ -89,16 +86,6 @@ public class ViewGroupImpl extends MinimalEObjectImpl.Container implements ViewG
 	 * @ordered
 	 */
 	protected boolean welcomeViewGroup = WELCOME_VIEW_GROUP_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getLayout() <em>Layout</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getLayout()
-	 * @generated
-	 * @ordered
-	 */
-	protected Layout layout;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -178,44 +165,6 @@ public class ViewGroupImpl extends MinimalEObjectImpl.Container implements ViewG
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Layout getLayout() {
-		if (layout != null && layout.eIsProxy()) {
-			InternalEObject oldLayout = (InternalEObject)layout;
-			layout = (Layout)eResolveProxy(oldLayout);
-			if (layout != oldLayout) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ViewsPackage.VIEW_GROUP__LAYOUT, oldLayout, layout));
-			}
-		}
-		return layout;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Layout basicGetLayout() {
-		return layout;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLayout(Layout newLayout) {
-		Layout oldLayout = layout;
-		layout = newLayout;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ViewsPackage.VIEW_GROUP__LAYOUT, oldLayout, layout));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -239,9 +188,6 @@ public class ViewGroupImpl extends MinimalEObjectImpl.Container implements ViewG
 				return getViews();
 			case ViewsPackage.VIEW_GROUP__WELCOME_VIEW_GROUP:
 				return isWelcomeViewGroup();
-			case ViewsPackage.VIEW_GROUP__LAYOUT:
-				if (resolve) return getLayout();
-				return basicGetLayout();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -265,9 +211,6 @@ public class ViewGroupImpl extends MinimalEObjectImpl.Container implements ViewG
 			case ViewsPackage.VIEW_GROUP__WELCOME_VIEW_GROUP:
 				setWelcomeViewGroup((Boolean)newValue);
 				return;
-			case ViewsPackage.VIEW_GROUP__LAYOUT:
-				setLayout((Layout)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -289,9 +232,6 @@ public class ViewGroupImpl extends MinimalEObjectImpl.Container implements ViewG
 			case ViewsPackage.VIEW_GROUP__WELCOME_VIEW_GROUP:
 				setWelcomeViewGroup(WELCOME_VIEW_GROUP_EDEFAULT);
 				return;
-			case ViewsPackage.VIEW_GROUP__LAYOUT:
-				setLayout((Layout)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -310,8 +250,6 @@ public class ViewGroupImpl extends MinimalEObjectImpl.Container implements ViewG
 				return views != null && !views.isEmpty();
 			case ViewsPackage.VIEW_GROUP__WELCOME_VIEW_GROUP:
 				return welcomeViewGroup != WELCOME_VIEW_GROUP_EDEFAULT;
-			case ViewsPackage.VIEW_GROUP__LAYOUT:
-				return layout != null;
 		}
 		return super.eIsSet(featureID);
 	}

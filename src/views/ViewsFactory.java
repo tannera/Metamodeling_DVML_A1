@@ -40,15 +40,6 @@ public interface ViewsFactory extends EFactory {
 	ClassIndexView createClassIndexView();
 
 	/**
-	 * Returns a new object of class '<em>Class Operation View</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Class Operation View</em>'.
-	 * @generated
-	 */
-	ClassOperationView createClassOperationView();
-
-	/**
 	 * Returns a new object of class '<em>Text</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -209,24 +200,6 @@ public interface ViewsFactory extends EFactory {
 	 * @generated
 	 */
 	EnumerationLiteralItem createEnumerationLiteralItem();
-
-	/**
-	 * Returns a new object of class '<em>Long</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Long</em>'.
-	 * @generated
-	 */
-	Long createLong();
-
-	/**
-	 * Returns a new object of class '<em>Short</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Short</em>'.
-	 * @generated
-	 */
-	Short createShort();
 
 	/**
 	 * Returns a new object of class '<em>Domain Model</em>'.

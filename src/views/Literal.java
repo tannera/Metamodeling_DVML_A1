@@ -31,7 +31,7 @@ public interface Literal extends NamedElement {
 	 * @return the value of the '<em>Value</em>' attribute.
 	 * @see #setValue(String)
 	 * @see views.ViewsPackage#getLiteral_Value()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	String getValue();

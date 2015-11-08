@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:ViewModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:views="http://www.example.org/views"
+    xsi:schemaLocation="http://www.example.org/views ../model/views.ecore">
+  <viewgroup
+      name="Institute"
+      welcomeViewGroup="true">
+    <views xsi:type="views:Create"
+        name="Institute"
+        header="Institute"
+        description="This is a form for creating institutes."
+        startView="true">
+      <viewelements
+          xsi:type="views:List"
+          elementID="Professors"
+          label="Professors">
+        <link
+            href="../src/Link.xmi#/"/>
+      </viewelements>
+      <viewelements
+          xsi:type="views:Table"
+          elementID="Courses"
+          label="Courses">
+        <link
+            href="../src/Link2.xmi#/"/>
+        <columns/>
+        <columns/>
+        <columns/>
+      </viewelements>
+      <elementgroups
+          header="Institute Details">
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Number"
+            label="Number"
+            format="[0-9]+$"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Name"
+            label="Name"
+            format="^[a-zA-Z -]+$"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <layout
+          href="../src/Layout.xmi#/"/>
+    </views>
+    <views xsi:type="views:Create"
+        name="Professor"
+        header="Professor"
+        description="">
+      <elementgroups
+          header="Personal Details">
+        <viewelements
+            xsi:type="views:Text"
+            elementID="First name"
+            label="First name"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Last name"
+            label="Last name"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="E-Mail"
+            label="E-Mail"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <elementgroups
+          header="Status">
+        <viewelements
+            xsi:type="views:Selection"
+            elementID="VisitingProf"
+            label="VisitingProf">
+          <selectionitems
+              SelectionValue="true"/>
+          <selectionitems
+              SelectionValue="false"/>
+        </viewelements>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="HomeUni"
+            label="HomeUni">
+          <visibilitycondition
+              xsi:type="views:ComparisonConditions"
+              conditionID="1"
+              conditionType="hidden"
+              value="false"
+              viewelements="VisitingProf"/>
+        </viewelements>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <layout
+          href="../src/Layout2.xmi#/"/>
+    </views>
+    <views xsi:type="views:Update"
+        name="Professor"
+        header="Update Professor">
+      <elementgroups
+          header="Update E-Mail Address">
+        <viewelements
+            xsi:type="views:Text"
+            elementID="E-Mail2"
+            label="E-Mail"
+            format=""/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <link
+          href="../src/Link.xmi#/"/>
+      <layout
+          href="../src/Layout.xmi#/"/>
+    </views>
+    <views xsi:type="views:Delete"
+        name="Course"
+        header="Course"
+        description="Do you really want to delete this course?">
+      <elementgroups>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Title"
+            label="Title"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <layout
+          href="../src/Layout.xmi#/"/>
+    </views>
+    <views xsi:type="views:Create"
+        name="Course"
+        header="Course">
+      <elementgroups
+          header="Course Details">
+        <viewelements
+            xsi:type="views:Selection"
+            elementID="Type2"
+            label="Type">
+          <visibilitycondition
+              xsi:type="views:CompositeConditions"
+              conditionID="2"
+              conditionType="disabled"
+              compositeType="OR">
+            <visibilitycondition
+                xsi:type="views:ComparisonConditions"
+                conditionID="4"
+                conditionType="disabled"
+                value="1"
+                comparison="LessThan"
+                viewelements="Credits2"/>
+            <visibilitycondition
+                xsi:type="views:ComparisonConditions"
+                conditionID="3"
+                conditionType="disabled"
+                value="30"
+                comparison="GreaterThan"
+                viewelements="Credits2"/>
+          </visibilitycondition>
+          <selectionitems
+              xsi:type="views:EnumerationLiteralItem"
+              SelectionValue="Lecture"/>
+          <selectionitems
+              xsi:type="views:EnumerationLiteralItem"
+              SelectionValue="Thesis"/>
+        </viewelements>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Title2"
+            label="Title"
+            format="^[a-zA-Z -]+$"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Credits2"
+            label="Credits"
+            format="^[0-9]+\.[0-9]$"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Description"
+            label="Description"
+            isLong="true"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <elementgroups
+          header="First Meeting">
+        <viewelements
+            xsi:type="views:DateTimePicker"
+            elementID="Date"
+            label="Date"
+            format="dddd, MMMM Do YYYY"/>
+        <viewelements
+            xsi:type="views:DateTimePicker"
+            elementID="Time"
+            label="Time"
+            format="h:mm A"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <elementgroups
+          header="Lecture">
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Topic"
+            label="Topic"
+            isLong="true"/>
+        <visibilitycondition
+            xsi:type="views:ComparisonConditions"
+            conditionID="7"
+            value="Lecture"
+            viewelements="Type2"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <elementgroups
+          header="Thesis">
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Keywords"
+            label="Keywords"/>
+        <visibilitycondition
+            xsi:type="views:ComparisonConditions"
+            conditionID="6"
+            value="Thesis"
+            viewelements="Type2"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <layout
+          href="../src/Layout.xmi#/"/>
+    </views>
+  </viewgroup>
+  <viewgroup
+      name="Courses">
+    <views xsi:type="views:ClassIndexView"
+        name="Course Index"
+        header="Courses"
+        description="List of all courses"
+        startView="true"/>
+    <views xsi:type="views:Read"
+        name="Show Course"
+        header="Course">
+      <elementgroups
+          header="Course Details">
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Type3"
+            label="Type"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Title3"
+            label="Title"/>
+        <viewelements
+            xsi:type="views:Text"
+            elementID="Credits3"
+            label="Credits"/>
+        <layout
+            href="../src/Layout.xmi#/"/>
+      </elementgroups>
+      <link
+          href="../src/Link2.xmi#/"/>
+      <layout
+          href="../src/Layout.xmi#/"/>
+    </views>
+  </viewgroup>
+</views:ViewModel>

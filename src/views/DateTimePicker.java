@@ -13,6 +13,7 @@ package views;
  * </p>
  * <ul>
  *   <li>{@link views.DateTimePicker#getDateType <em>Date Type</em>}</li>
+ *   <li>{@link views.DateTimePicker#getFormat <em>Format</em>}</li>
  * </ul>
  *
  * @see views.ViewsPackage#getDateTimePicker()
@@ -48,5 +49,31 @@ public interface DateTimePicker extends PropertyElements {
 	 * @generated
 	 */
 	void setDateType(DateType value);
+
+	/**
+	 * Returns the value of the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Format</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Format</em>' attribute.
+	 * @see #setFormat(String)
+	 * @see views.ViewsPackage#getDateTimePicker_Format()
+	 * @model
+	 * @generated
+	 */
+	String getFormat();
+
+	/**
+	 * Sets the value of the '{@link views.DateTimePicker#getFormat <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Format</em>' attribute.
+	 * @see #getFormat()
+	 * @generated
+	 */
+	void setFormat(String value);
 
 } // DateTimePicker

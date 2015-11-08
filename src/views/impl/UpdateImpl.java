@@ -3,9 +3,6 @@
 package views.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import views.Update;
 import views.ViewsPackage;
 
@@ -16,7 +13,7 @@ import views.ViewsPackage;
  *
  * @generated
  */
-public class UpdateImpl extends MinimalEObjectImpl.Container implements Update {
+public class UpdateImpl extends ClassOperationViewImpl implements Update {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

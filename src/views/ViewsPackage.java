@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see views.ViewsFactory
  * @model kind="package"
- *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore' ecore.xml.type='http://www.eclipse.org/emf/2003/XMLType'"
  *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
@@ -161,22 +161,13 @@ public interface ViewsPackage extends EPackage {
 	int VIEW_GROUP__WELCOME_VIEW_GROUP = 2;
 
 	/**
-	 * The feature id for the '<em><b>Layout</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VIEW_GROUP__LAYOUT = 3;
-
-	/**
 	 * The number of structural features of the '<em>View Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VIEW_GROUP_FEATURE_COUNT = 4;
+	int VIEW_GROUP_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>View Group</em>' class.
@@ -325,7 +316,7 @@ public interface ViewsPackage extends EPackage {
 	int CLASS_OPERATION_VIEW__ELEMENTGROUPS = VIEW_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' reference.
+	 * The feature id for the '<em><b>Link</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -334,40 +325,13 @@ public interface ViewsPackage extends EPackage {
 	int CLASS_OPERATION_VIEW__LINK = VIEW_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Create</b></em>' reference.
+	 * The feature id for the '<em><b>Layout</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_VIEW__CREATE = VIEW_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Read</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_OPERATION_VIEW__READ = VIEW_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Update</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_OPERATION_VIEW__UPDATE = VIEW_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Delete</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLASS_OPERATION_VIEW__DELETE = VIEW_FEATURE_COUNT + 6;
+	int CLASS_OPERATION_VIEW__LAYOUT = VIEW_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Class Operation View</em>' class.
@@ -376,7 +340,7 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CLASS_OPERATION_VIEW_FEATURE_COUNT = VIEW_FEATURE_COUNT + 7;
+	int CLASS_OPERATION_VIEW_FEATURE_COUNT = VIEW_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Class Operation View</em>' class.
@@ -535,7 +499,7 @@ public interface ViewsPackage extends EPackage {
 	int ASSOCIATION_ELEMENTS__VISIBILITYCONDITION = VIEW_ELEMENTS__VISIBILITYCONDITION;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * The feature id for the '<em><b>Link</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -608,13 +572,40 @@ public interface ViewsPackage extends EPackage {
 	int TEXT__TEXT_TYPE = PROPERTY_ELEMENTS_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__FORMAT = PROPERTY_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Is Short</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__IS_SHORT = PROPERTY_ELEMENTS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Is Long</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT__IS_LONG = PROPERTY_ELEMENTS_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Text</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_FEATURE_COUNT = PROPERTY_ELEMENTS_FEATURE_COUNT + 1;
+	int TEXT_FEATURE_COUNT = PROPERTY_ELEMENTS_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Text</em>' class.
@@ -672,13 +663,22 @@ public interface ViewsPackage extends EPackage {
 	int DATE_TIME_PICKER__DATE_TYPE = PROPERTY_ELEMENTS_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Format</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATE_TIME_PICKER__FORMAT = PROPERTY_ELEMENTS_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Date Time Picker</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATE_TIME_PICKER_FEATURE_COUNT = PROPERTY_ELEMENTS_FEATURE_COUNT + 1;
+	int DATE_TIME_PICKER_FEATURE_COUNT = PROPERTY_ELEMENTS_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Date Time Picker</em>' class.
@@ -837,13 +837,40 @@ public interface ViewsPackage extends EPackage {
 	int COMPARISON_CONDITIONS__CONDITION_TYPE = VISIBILITY_CONDITION__CONDITION_TYPE;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_CONDITIONS__VALUE = VISIBILITY_CONDITION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Comparison</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_CONDITIONS__COMPARISON = VISIBILITY_CONDITION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Viewelements</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARISON_CONDITIONS__VIEWELEMENTS = VISIBILITY_CONDITION_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Comparison Conditions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARISON_CONDITIONS_FEATURE_COUNT = VISIBILITY_CONDITION_FEATURE_COUNT + 0;
+	int COMPARISON_CONDITIONS_FEATURE_COUNT = VISIBILITY_CONDITION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Comparison Conditions</em>' class.
@@ -892,13 +919,22 @@ public interface ViewsPackage extends EPackage {
 	int COMPOSITE_CONDITIONS__COMPOSITE_TYPE = VISIBILITY_CONDITION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Visibilitycondition</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_CONDITIONS__VISIBILITYCONDITION = VISIBILITY_CONDITION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Composite Conditions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_CONDITIONS_FEATURE_COUNT = VISIBILITY_CONDITION_FEATURE_COUNT + 1;
+	int COMPOSITE_CONDITIONS_FEATURE_COUNT = VISIBILITY_CONDITION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Composite Conditions</em>' class.
@@ -947,7 +983,7 @@ public interface ViewsPackage extends EPackage {
 	int LIST__VISIBILITYCONDITION = ASSOCIATION_ELEMENTS__VISIBILITYCONDITION;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * The feature id for the '<em><b>Link</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -984,13 +1020,85 @@ public interface ViewsPackage extends EPackage {
 	int CREATE = 13;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__NAME = CLASS_OPERATION_VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Header</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__HEADER = CLASS_OPERATION_VIEW__HEADER;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__DESCRIPTION = CLASS_OPERATION_VIEW__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Start View</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__START_VIEW = CLASS_OPERATION_VIEW__START_VIEW;
+
+	/**
+	 * The feature id for the '<em><b>Viewelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__VIEWELEMENTS = CLASS_OPERATION_VIEW__VIEWELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Elementgroups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__ELEMENTGROUPS = CLASS_OPERATION_VIEW__ELEMENTGROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__LINK = CLASS_OPERATION_VIEW__LINK;
+
+	/**
+	 * The feature id for the '<em><b>Layout</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CREATE__LAYOUT = CLASS_OPERATION_VIEW__LAYOUT;
+
+	/**
 	 * The number of structural features of the '<em>Create</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_FEATURE_COUNT = 0;
+	int CREATE_FEATURE_COUNT = CLASS_OPERATION_VIEW_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Create</em>' class.
@@ -999,7 +1107,7 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CREATE_OPERATION_COUNT = 0;
+	int CREATE_OPERATION_COUNT = CLASS_OPERATION_VIEW_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link views.impl.ReadImpl <em>Read</em>}' class.
@@ -1012,13 +1120,85 @@ public interface ViewsPackage extends EPackage {
 	int READ = 14;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__NAME = CLASS_OPERATION_VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Header</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__HEADER = CLASS_OPERATION_VIEW__HEADER;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__DESCRIPTION = CLASS_OPERATION_VIEW__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Start View</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__START_VIEW = CLASS_OPERATION_VIEW__START_VIEW;
+
+	/**
+	 * The feature id for the '<em><b>Viewelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__VIEWELEMENTS = CLASS_OPERATION_VIEW__VIEWELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Elementgroups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__ELEMENTGROUPS = CLASS_OPERATION_VIEW__ELEMENTGROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__LINK = CLASS_OPERATION_VIEW__LINK;
+
+	/**
+	 * The feature id for the '<em><b>Layout</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int READ__LAYOUT = CLASS_OPERATION_VIEW__LAYOUT;
+
+	/**
 	 * The number of structural features of the '<em>Read</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int READ_FEATURE_COUNT = 0;
+	int READ_FEATURE_COUNT = CLASS_OPERATION_VIEW_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Read</em>' class.
@@ -1027,7 +1207,7 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int READ_OPERATION_COUNT = 0;
+	int READ_OPERATION_COUNT = CLASS_OPERATION_VIEW_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link views.impl.DeleteImpl <em>Delete</em>}' class.
@@ -1040,13 +1220,85 @@ public interface ViewsPackage extends EPackage {
 	int DELETE = 15;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__NAME = CLASS_OPERATION_VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Header</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__HEADER = CLASS_OPERATION_VIEW__HEADER;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__DESCRIPTION = CLASS_OPERATION_VIEW__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Start View</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__START_VIEW = CLASS_OPERATION_VIEW__START_VIEW;
+
+	/**
+	 * The feature id for the '<em><b>Viewelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__VIEWELEMENTS = CLASS_OPERATION_VIEW__VIEWELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Elementgroups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__ELEMENTGROUPS = CLASS_OPERATION_VIEW__ELEMENTGROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__LINK = CLASS_OPERATION_VIEW__LINK;
+
+	/**
+	 * The feature id for the '<em><b>Layout</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DELETE__LAYOUT = CLASS_OPERATION_VIEW__LAYOUT;
+
+	/**
 	 * The number of structural features of the '<em>Delete</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_FEATURE_COUNT = 0;
+	int DELETE_FEATURE_COUNT = CLASS_OPERATION_VIEW_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Delete</em>' class.
@@ -1055,7 +1307,7 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DELETE_OPERATION_COUNT = 0;
+	int DELETE_OPERATION_COUNT = CLASS_OPERATION_VIEW_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link views.impl.UpdateImpl <em>Update</em>}' class.
@@ -1068,13 +1320,85 @@ public interface ViewsPackage extends EPackage {
 	int UPDATE = 16;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__NAME = CLASS_OPERATION_VIEW__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Header</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__HEADER = CLASS_OPERATION_VIEW__HEADER;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__DESCRIPTION = CLASS_OPERATION_VIEW__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Start View</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__START_VIEW = CLASS_OPERATION_VIEW__START_VIEW;
+
+	/**
+	 * The feature id for the '<em><b>Viewelements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__VIEWELEMENTS = CLASS_OPERATION_VIEW__VIEWELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Elementgroups</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__ELEMENTGROUPS = CLASS_OPERATION_VIEW__ELEMENTGROUPS;
+
+	/**
+	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__LINK = CLASS_OPERATION_VIEW__LINK;
+
+	/**
+	 * The feature id for the '<em><b>Layout</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UPDATE__LAYOUT = CLASS_OPERATION_VIEW__LAYOUT;
+
+	/**
 	 * The number of structural features of the '<em>Update</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_FEATURE_COUNT = 0;
+	int UPDATE_FEATURE_COUNT = CLASS_OPERATION_VIEW_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Update</em>' class.
@@ -1083,7 +1407,7 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int UPDATE_OPERATION_COUNT = 0;
+	int UPDATE_OPERATION_COUNT = CLASS_OPERATION_VIEW_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link views.impl.ElementGroupsImpl <em>Element Groups</em>}' class.
@@ -1160,13 +1484,22 @@ public interface ViewsPackage extends EPackage {
 	int SELECTION_ITEMS = 19;
 
 	/**
+	 * The feature id for the '<em><b>Selection Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_ITEMS__SELECTION_VALUE = 0;
+
+	/**
 	 * The number of structural features of the '<em>Selection Items</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SELECTION_ITEMS_FEATURE_COUNT = 0;
+	int SELECTION_ITEMS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Selection Items</em>' class.
@@ -1298,7 +1631,7 @@ public interface ViewsPackage extends EPackage {
 	int TABLE__VISIBILITYCONDITION = ASSOCIATION_ELEMENTS__VISIBILITYCONDITION;
 
 	/**
-	 * The feature id for the '<em><b>Link</b></em>' reference list.
+	 * The feature id for the '<em><b>Link</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1409,6 +1742,15 @@ public interface ViewsPackage extends EPackage {
 	int ENUMERATION_LITERAL_ITEM = 25;
 
 	/**
+	 * The feature id for the '<em><b>Selection Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENUMERATION_LITERAL_ITEM__SELECTION_VALUE = SELECTION_ITEMS__SELECTION_VALUE;
+
+	/**
 	 * The number of structural features of the '<em>Enumeration Literal Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1427,134 +1769,6 @@ public interface ViewsPackage extends EPackage {
 	int ENUMERATION_LITERAL_ITEM_OPERATION_COUNT = SELECTION_ITEMS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link views.impl.LongImpl <em>Long</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see views.impl.LongImpl
-	 * @see views.impl.ViewsPackageImpl#getLong()
-	 * @generated
-	 */
-	int LONG = 26;
-
-	/**
-	 * The feature id for the '<em><b>Element ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LONG__ELEMENT_ID = TEXT__ELEMENT_ID;
-
-	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LONG__LABEL = TEXT__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Visibilitycondition</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LONG__VISIBILITYCONDITION = TEXT__VISIBILITYCONDITION;
-
-	/**
-	 * The feature id for the '<em><b>Text Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LONG__TEXT_TYPE = TEXT__TEXT_TYPE;
-
-	/**
-	 * The number of structural features of the '<em>Long</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LONG_FEATURE_COUNT = TEXT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Long</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LONG_OPERATION_COUNT = TEXT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link views.impl.ShortImpl <em>Short</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see views.impl.ShortImpl
-	 * @see views.impl.ViewsPackageImpl#getShort()
-	 * @generated
-	 */
-	int SHORT = 27;
-
-	/**
-	 * The feature id for the '<em><b>Element ID</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHORT__ELEMENT_ID = TEXT__ELEMENT_ID;
-
-	/**
-	 * The feature id for the '<em><b>Label</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHORT__LABEL = TEXT__LABEL;
-
-	/**
-	 * The feature id for the '<em><b>Visibilitycondition</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHORT__VISIBILITYCONDITION = TEXT__VISIBILITYCONDITION;
-
-	/**
-	 * The feature id for the '<em><b>Text Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHORT__TEXT_TYPE = TEXT__TEXT_TYPE;
-
-	/**
-	 * The number of structural features of the '<em>Short</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHORT_FEATURE_COUNT = TEXT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Short</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHORT_OPERATION_COUNT = TEXT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link views.impl.DomainModelImpl <em>Domain Model</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1562,7 +1776,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getDomainModel()
 	 * @generated
 	 */
-	int DOMAIN_MODEL = 28;
+	int DOMAIN_MODEL = 26;
 
 	/**
 	 * The feature id for the '<em><b>Class</b></em>' containment reference list.
@@ -1617,7 +1831,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getNamedElement()
 	 * @generated
 	 */
-	int NAMED_ELEMENT = 36;
+	int NAMED_ELEMENT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1654,7 +1868,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getClass_()
 	 * @generated
 	 */
-	int CLASS = 29;
+	int CLASS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1684,7 +1898,7 @@ public interface ViewsPackage extends EPackage {
 	int CLASS__SUPERCLASS = NAMED_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Association</b></em>' reference list.
+	 * The feature id for the '<em><b>Association</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1718,7 +1932,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getEnumeration()
 	 * @generated
 	 */
-	int ENUMERATION = 30;
+	int ENUMERATION = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1764,7 +1978,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getDataType()
 	 * @generated
 	 */
-	int DATA_TYPE = 31;
+	int DATA_TYPE = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1801,7 +2015,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getProperty()
 	 * @generated
 	 */
-	int PROPERTY = 32;
+	int PROPERTY = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1849,13 +2063,22 @@ public interface ViewsPackage extends EPackage {
 	int PROPERTY__CLASS = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Is ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPERTY__IS_ID = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Property</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROPERTY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int PROPERTY_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Property</em>' class.
@@ -1874,7 +2097,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getLiteral()
 	 * @generated
 	 */
-	int LITERAL = 33;
+	int LITERAL = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1920,7 +2143,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getAssociation()
 	 * @generated
 	 */
-	int ASSOCIATION = 34;
+	int ASSOCIATION = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1966,7 +2189,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getAssociationEnd()
 	 * @generated
 	 */
-	int ASSOCIATION_END = 35;
+	int ASSOCIATION_END = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2048,7 +2271,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getComparisonCondition()
 	 * @generated
 	 */
-	int COMPARISON_CONDITION = 37;
+	int COMPARISON_CONDITION = 35;
 
 	/**
 	 * The meta object id for the '{@link views.CompositeConditionsType <em>Composite Conditions Type</em>}' enum.
@@ -2058,7 +2281,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getCompositeConditionsType()
 	 * @generated
 	 */
-	int COMPOSITE_CONDITIONS_TYPE = 38;
+	int COMPOSITE_CONDITIONS_TYPE = 36;
 
 	/**
 	 * The meta object id for the '{@link views.TextType <em>Text Type</em>}' enum.
@@ -2068,7 +2291,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getTextType()
 	 * @generated
 	 */
-	int TEXT_TYPE = 39;
+	int TEXT_TYPE = 37;
 
 	/**
 	 * The meta object id for the '{@link views.DateType <em>Date Type</em>}' enum.
@@ -2078,7 +2301,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getDateType()
 	 * @generated
 	 */
-	int DATE_TYPE = 40;
+	int DATE_TYPE = 38;
 
 	/**
 	 * The meta object id for the '{@link views.LayoutType <em>Layout Type</em>}' enum.
@@ -2088,7 +2311,7 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getLayoutType()
 	 * @generated
 	 */
-	int LAYOUT_TYPE = 41;
+	int LAYOUT_TYPE = 39;
 
 	/**
 	 * The meta object id for the '{@link views.PropertyType <em>Property Type</em>}' enum.
@@ -2098,7 +2321,18 @@ public interface ViewsPackage extends EPackage {
 	 * @see views.impl.ViewsPackageImpl#getPropertyType()
 	 * @generated
 	 */
-	int PROPERTY_TYPE = 42;
+	int PROPERTY_TYPE = 40;
+
+
+	/**
+	 * The meta object id for the '{@link views.ComparisonValue <em>Comparison Value</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see views.ComparisonValue
+	 * @see views.impl.ViewsPackageImpl#getComparisonValue()
+	 * @generated
+	 */
+	int COMPARISON_VALUE = 41;
 
 
 	/**
@@ -2199,17 +2433,6 @@ public interface ViewsPackage extends EPackage {
 	EAttribute getViewGroup_WelcomeViewGroup();
 
 	/**
-	 * Returns the meta object for the reference '{@link views.ViewGroup#getLayout <em>Layout</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Layout</em>'.
-	 * @see views.ViewGroup#getLayout()
-	 * @see #getViewGroup()
-	 * @generated
-	 */
-	EReference getViewGroup_Layout();
-
-	/**
 	 * Returns the meta object for class '{@link views.ClassIndexView <em>Class Index View</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2263,10 +2486,10 @@ public interface ViewsPackage extends EPackage {
 	EReference getClassOperationView_Elementgroups();
 
 	/**
-	 * Returns the meta object for the reference '{@link views.ClassOperationView#getLink <em>Link</em>}'.
+	 * Returns the meta object for the reference list '{@link views.ClassOperationView#getLink <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Link</em>'.
+	 * @return the meta object for the reference list '<em>Link</em>'.
 	 * @see views.ClassOperationView#getLink()
 	 * @see #getClassOperationView()
 	 * @generated
@@ -2274,48 +2497,15 @@ public interface ViewsPackage extends EPackage {
 	EReference getClassOperationView_Link();
 
 	/**
-	 * Returns the meta object for the reference '{@link views.ClassOperationView#getCreate <em>Create</em>}'.
+	 * Returns the meta object for the reference '{@link views.ClassOperationView#getLayout <em>Layout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Create</em>'.
-	 * @see views.ClassOperationView#getCreate()
+	 * @return the meta object for the reference '<em>Layout</em>'.
+	 * @see views.ClassOperationView#getLayout()
 	 * @see #getClassOperationView()
 	 * @generated
 	 */
-	EReference getClassOperationView_Create();
-
-	/**
-	 * Returns the meta object for the reference '{@link views.ClassOperationView#getRead <em>Read</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Read</em>'.
-	 * @see views.ClassOperationView#getRead()
-	 * @see #getClassOperationView()
-	 * @generated
-	 */
-	EReference getClassOperationView_Read();
-
-	/**
-	 * Returns the meta object for the reference '{@link views.ClassOperationView#getUpdate <em>Update</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Update</em>'.
-	 * @see views.ClassOperationView#getUpdate()
-	 * @see #getClassOperationView()
-	 * @generated
-	 */
-	EReference getClassOperationView_Update();
-
-	/**
-	 * Returns the meta object for the reference '{@link views.ClassOperationView#getDelete <em>Delete</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Delete</em>'.
-	 * @see views.ClassOperationView#getDelete()
-	 * @see #getClassOperationView()
-	 * @generated
-	 */
-	EReference getClassOperationView_Delete();
+	EReference getClassOperationView_Layout();
 
 	/**
 	 * Returns the meta object for class '{@link views.ViewElements <em>View Elements</em>}'.
@@ -2381,10 +2571,10 @@ public interface ViewsPackage extends EPackage {
 	EClass getAssociationElements();
 
 	/**
-	 * Returns the meta object for the reference list '{@link views.AssociationElements#getLink <em>Link</em>}'.
+	 * Returns the meta object for the reference '{@link views.AssociationElements#getLink <em>Link</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Link</em>'.
+	 * @return the meta object for the reference '<em>Link</em>'.
 	 * @see views.AssociationElements#getLink()
 	 * @see #getAssociationElements()
 	 * @generated
@@ -2413,6 +2603,39 @@ public interface ViewsPackage extends EPackage {
 	EAttribute getText_TextType();
 
 	/**
+	 * Returns the meta object for the attribute '{@link views.Text#getFormat <em>Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Format</em>'.
+	 * @see views.Text#getFormat()
+	 * @see #getText()
+	 * @generated
+	 */
+	EAttribute getText_Format();
+
+	/**
+	 * Returns the meta object for the attribute '{@link views.Text#isIsShort <em>Is Short</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Short</em>'.
+	 * @see views.Text#isIsShort()
+	 * @see #getText()
+	 * @generated
+	 */
+	EAttribute getText_IsShort();
+
+	/**
+	 * Returns the meta object for the attribute '{@link views.Text#isIsLong <em>Is Long</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Long</em>'.
+	 * @see views.Text#isIsLong()
+	 * @see #getText()
+	 * @generated
+	 */
+	EAttribute getText_IsLong();
+
+	/**
 	 * Returns the meta object for class '{@link views.DateTimePicker <em>Date Time Picker</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2432,6 +2655,17 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getDateTimePicker_DateType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link views.DateTimePicker#getFormat <em>Format</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Format</em>'.
+	 * @see views.DateTimePicker#getFormat()
+	 * @see #getDateTimePicker()
+	 * @generated
+	 */
+	EAttribute getDateTimePicker_Format();
 
 	/**
 	 * Returns the meta object for class '{@link views.Selection <em>Selection</em>}'.
@@ -2476,6 +2710,39 @@ public interface ViewsPackage extends EPackage {
 	EClass getComparisonConditions();
 
 	/**
+	 * Returns the meta object for the attribute '{@link views.ComparisonConditions#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see views.ComparisonConditions#getValue()
+	 * @see #getComparisonConditions()
+	 * @generated
+	 */
+	EAttribute getComparisonConditions_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link views.ComparisonConditions#getComparison <em>Comparison</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comparison</em>'.
+	 * @see views.ComparisonConditions#getComparison()
+	 * @see #getComparisonConditions()
+	 * @generated
+	 */
+	EAttribute getComparisonConditions_Comparison();
+
+	/**
+	 * Returns the meta object for the reference '{@link views.ComparisonConditions#getViewelements <em>Viewelements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Viewelements</em>'.
+	 * @see views.ComparisonConditions#getViewelements()
+	 * @see #getComparisonConditions()
+	 * @generated
+	 */
+	EReference getComparisonConditions_Viewelements();
+
+	/**
 	 * Returns the meta object for class '{@link views.CompositeConditions <em>Composite Conditions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2495,6 +2762,17 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getCompositeConditions_CompositeType();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link views.CompositeConditions#getVisibilitycondition <em>Visibilitycondition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Visibilitycondition</em>'.
+	 * @see views.CompositeConditions#getVisibilitycondition()
+	 * @see #getCompositeConditions()
+	 * @generated
+	 */
+	EReference getCompositeConditions_Visibilitycondition();
 
 	/**
 	 * Returns the meta object for class '{@link views.List <em>List</em>}'.
@@ -2643,6 +2921,17 @@ public interface ViewsPackage extends EPackage {
 	EClass getSelectionItems();
 
 	/**
+	 * Returns the meta object for the attribute '{@link views.SelectionItems#getSelectionValue <em>Selection Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Selection Value</em>'.
+	 * @see views.SelectionItems#getSelectionValue()
+	 * @see #getSelectionItems()
+	 * @generated
+	 */
+	EAttribute getSelectionItems_SelectionValue();
+
+	/**
 	 * Returns the meta object for class '{@link views.Layout <em>Layout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2758,26 +3047,6 @@ public interface ViewsPackage extends EPackage {
 	EClass getEnumerationLiteralItem();
 
 	/**
-	 * Returns the meta object for class '{@link views.Long <em>Long</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Long</em>'.
-	 * @see views.Long
-	 * @generated
-	 */
-	EClass getLong();
-
-	/**
-	 * Returns the meta object for class '{@link views.Short <em>Short</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Short</em>'.
-	 * @see views.Short
-	 * @generated
-	 */
-	EClass getShort();
-
-	/**
 	 * Returns the meta object for class '{@link views.DomainModel <em>Domain Model</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2853,10 +3122,10 @@ public interface ViewsPackage extends EPackage {
 	EReference getClass_Superclass();
 
 	/**
-	 * Returns the meta object for the reference list '{@link views.Class#getAssociation <em>Association</em>}'.
+	 * Returns the meta object for the containment reference list '{@link views.Class#getAssociation <em>Association</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Association</em>'.
+	 * @return the meta object for the containment reference list '<em>Association</em>'.
 	 * @see views.Class#getAssociation()
 	 * @see #getClass_()
 	 * @generated
@@ -2947,6 +3216,17 @@ public interface ViewsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getProperty_Class();
+
+	/**
+	 * Returns the meta object for the attribute '{@link views.Property#isIsID <em>Is ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is ID</em>'.
+	 * @see views.Property#isIsID()
+	 * @see #getProperty()
+	 * @generated
+	 */
+	EAttribute getProperty_IsID();
 
 	/**
 	 * Returns the meta object for class '{@link views.Literal <em>Literal</em>}'.
@@ -3137,6 +3417,16 @@ public interface ViewsPackage extends EPackage {
 	EEnum getPropertyType();
 
 	/**
+	 * Returns the meta object for enum '{@link views.ComparisonValue <em>Comparison Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Comparison Value</em>'.
+	 * @see views.ComparisonValue
+	 * @generated
+	 */
+	EEnum getComparisonValue();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3236,14 +3526,6 @@ public interface ViewsPackage extends EPackage {
 		EAttribute VIEW_GROUP__WELCOME_VIEW_GROUP = eINSTANCE.getViewGroup_WelcomeViewGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Layout</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VIEW_GROUP__LAYOUT = eINSTANCE.getViewGroup_Layout();
-
-		/**
 		 * The meta object literal for the '{@link views.impl.ClassIndexViewImpl <em>Class Index View</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3288,7 +3570,7 @@ public interface ViewsPackage extends EPackage {
 		EReference CLASS_OPERATION_VIEW__ELEMENTGROUPS = eINSTANCE.getClassOperationView_Elementgroups();
 
 		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Link</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3296,36 +3578,12 @@ public interface ViewsPackage extends EPackage {
 		EReference CLASS_OPERATION_VIEW__LINK = eINSTANCE.getClassOperationView_Link();
 
 		/**
-		 * The meta object literal for the '<em><b>Create</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Layout</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLASS_OPERATION_VIEW__CREATE = eINSTANCE.getClassOperationView_Create();
-
-		/**
-		 * The meta object literal for the '<em><b>Read</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS_OPERATION_VIEW__READ = eINSTANCE.getClassOperationView_Read();
-
-		/**
-		 * The meta object literal for the '<em><b>Update</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS_OPERATION_VIEW__UPDATE = eINSTANCE.getClassOperationView_Update();
-
-		/**
-		 * The meta object literal for the '<em><b>Delete</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLASS_OPERATION_VIEW__DELETE = eINSTANCE.getClassOperationView_Delete();
+		EReference CLASS_OPERATION_VIEW__LAYOUT = eINSTANCE.getClassOperationView_Layout();
 
 		/**
 		 * The meta object literal for the '{@link views.impl.ViewElementsImpl <em>View Elements</em>}' class.
@@ -3382,7 +3640,7 @@ public interface ViewsPackage extends EPackage {
 		EClass ASSOCIATION_ELEMENTS = eINSTANCE.getAssociationElements();
 
 		/**
-		 * The meta object literal for the '<em><b>Link</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Link</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3408,6 +3666,30 @@ public interface ViewsPackage extends EPackage {
 		EAttribute TEXT__TEXT_TYPE = eINSTANCE.getText_TextType();
 
 		/**
+		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT__FORMAT = eINSTANCE.getText_Format();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Short</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT__IS_SHORT = eINSTANCE.getText_IsShort();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Long</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEXT__IS_LONG = eINSTANCE.getText_IsLong();
+
+		/**
 		 * The meta object literal for the '{@link views.impl.DateTimePickerImpl <em>Date Time Picker</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3424,6 +3706,14 @@ public interface ViewsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute DATE_TIME_PICKER__DATE_TYPE = eINSTANCE.getDateTimePicker_DateType();
+
+		/**
+		 * The meta object literal for the '<em><b>Format</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATE_TIME_PICKER__FORMAT = eINSTANCE.getDateTimePicker_Format();
 
 		/**
 		 * The meta object literal for the '{@link views.impl.SelectionImpl <em>Selection</em>}' class.
@@ -3462,6 +3752,30 @@ public interface ViewsPackage extends EPackage {
 		EClass COMPARISON_CONDITIONS = eINSTANCE.getComparisonConditions();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARISON_CONDITIONS__VALUE = eINSTANCE.getComparisonConditions_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Comparison</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARISON_CONDITIONS__COMPARISON = eINSTANCE.getComparisonConditions_Comparison();
+
+		/**
+		 * The meta object literal for the '<em><b>Viewelements</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPARISON_CONDITIONS__VIEWELEMENTS = eINSTANCE.getComparisonConditions_Viewelements();
+
+		/**
 		 * The meta object literal for the '{@link views.impl.CompositeConditionsImpl <em>Composite Conditions</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3478,6 +3792,14 @@ public interface ViewsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute COMPOSITE_CONDITIONS__COMPOSITE_TYPE = eINSTANCE.getCompositeConditions_CompositeType();
+
+		/**
+		 * The meta object literal for the '<em><b>Visibilitycondition</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_CONDITIONS__VISIBILITYCONDITION = eINSTANCE.getCompositeConditions_Visibilitycondition();
 
 		/**
 		 * The meta object literal for the '{@link views.impl.ListImpl <em>List</em>}' class.
@@ -3608,6 +3930,14 @@ public interface ViewsPackage extends EPackage {
 		EClass SELECTION_ITEMS = eINSTANCE.getSelectionItems();
 
 		/**
+		 * The meta object literal for the '<em><b>Selection Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SELECTION_ITEMS__SELECTION_VALUE = eINSTANCE.getSelectionItems_SelectionValue();
+
+		/**
 		 * The meta object literal for the '{@link views.impl.LayoutImpl <em>Layout</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3708,26 +4038,6 @@ public interface ViewsPackage extends EPackage {
 		EClass ENUMERATION_LITERAL_ITEM = eINSTANCE.getEnumerationLiteralItem();
 
 		/**
-		 * The meta object literal for the '{@link views.impl.LongImpl <em>Long</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see views.impl.LongImpl
-		 * @see views.impl.ViewsPackageImpl#getLong()
-		 * @generated
-		 */
-		EClass LONG = eINSTANCE.getLong();
-
-		/**
-		 * The meta object literal for the '{@link views.impl.ShortImpl <em>Short</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see views.impl.ShortImpl
-		 * @see views.impl.ViewsPackageImpl#getShort()
-		 * @generated
-		 */
-		EClass SHORT = eINSTANCE.getShort();
-
-		/**
 		 * The meta object literal for the '{@link views.impl.DomainModelImpl <em>Domain Model</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3788,7 +4098,7 @@ public interface ViewsPackage extends EPackage {
 		EReference CLASS__SUPERCLASS = eINSTANCE.getClass_Superclass();
 
 		/**
-		 * The meta object literal for the '<em><b>Association</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Association</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3864,6 +4174,14 @@ public interface ViewsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PROPERTY__CLASS = eINSTANCE.getProperty_Class();
+
+		/**
+		 * The meta object literal for the '<em><b>Is ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROPERTY__IS_ID = eINSTANCE.getProperty_IsID();
 
 		/**
 		 * The meta object literal for the '{@link views.impl.LiteralImpl <em>Literal</em>}' class.
@@ -4028,6 +4346,16 @@ public interface ViewsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum PROPERTY_TYPE = eINSTANCE.getPropertyType();
+
+		/**
+		 * The meta object literal for the '{@link views.ComparisonValue <em>Comparison Value</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see views.ComparisonValue
+		 * @see views.impl.ViewsPackageImpl#getComparisonValue()
+		 * @generated
+		 */
+		EEnum COMPARISON_VALUE = eINSTANCE.getComparisonValue();
 
 	}
 

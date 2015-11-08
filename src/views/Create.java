@@ -2,8 +2,6 @@
  */
 package views;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Create</b></em>'.
@@ -14,5 +12,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Create extends EObject {
+public interface Create extends ClassOperationView {
 } // Create

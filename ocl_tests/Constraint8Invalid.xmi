@@ -8,5 +8,7 @@
     name="Example"
     superclass="/">
   <property
-      name="Example"/>
+      name="Example"
+      type="DataType"
+      class="/"/>
 </views:Class>

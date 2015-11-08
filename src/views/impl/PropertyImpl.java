@@ -25,6 +25,7 @@ import views.ViewsPackage;
  *   <li>{@link views.impl.PropertyImpl#getLowerBound <em>Lower Bound</em>}</li>
  *   <li>{@link views.impl.PropertyImpl#getUpperBound <em>Upper Bound</em>}</li>
  *   <li>{@link views.impl.PropertyImpl#getClass_ <em>Class</em>}</li>
+ *   <li>{@link views.impl.PropertyImpl#isIsID <em>Is ID</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +100,26 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 * @ordered
 	 */
 	protected views.Class class_;
+
+	/**
+	 * The default value of the '{@link #isIsID() <em>Is ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsID()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_ID_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsID() <em>Is ID</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsID()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isID = IS_ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -225,6 +246,27 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsID() {
+		return isID;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsID(boolean newIsID) {
+		boolean oldIsID = isID;
+		isID = newIsID;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ViewsPackage.PROPERTY__IS_ID, oldIsID, isID));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -237,6 +279,8 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 			case ViewsPackage.PROPERTY__CLASS:
 				if (resolve) return getClass_();
 				return basicGetClass();
+			case ViewsPackage.PROPERTY__IS_ID:
+				return isIsID();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -260,6 +304,9 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 				return;
 			case ViewsPackage.PROPERTY__CLASS:
 				setClass((views.Class)newValue);
+				return;
+			case ViewsPackage.PROPERTY__IS_ID:
+				setIsID((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -285,6 +332,9 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 			case ViewsPackage.PROPERTY__CLASS:
 				setClass((views.Class)null);
 				return;
+			case ViewsPackage.PROPERTY__IS_ID:
+				setIsID(IS_ID_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -305,6 +355,8 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 				return upperBound != UPPER_BOUND_EDEFAULT;
 			case ViewsPackage.PROPERTY__CLASS:
 				return class_ != null;
+			case ViewsPackage.PROPERTY__IS_ID:
+				return isID != IS_ID_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -325,6 +377,8 @@ public class PropertyImpl extends NamedElementImpl implements Property {
 		result.append(lowerBound);
 		result.append(", UpperBound: ");
 		result.append(upperBound);
+		result.append(", isID: ");
+		result.append(isID);
 		result.append(')');
 		return result.toString();
 	}

@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link views.ViewGroup#getName <em>Name</em>}</li>
  *   <li>{@link views.ViewGroup#getViews <em>Views</em>}</li>
  *   <li>{@link views.ViewGroup#isWelcomeViewGroup <em>Welcome View Group</em>}</li>
- *   <li>{@link views.ViewGroup#getLayout <em>Layout</em>}</li>
  * </ul>
  *
  * @see views.ViewsPackage#getViewGroup()
@@ -95,31 +94,5 @@ public interface ViewGroup extends EObject {
 	 * @generated
 	 */
 	void setWelcomeViewGroup(boolean value);
-
-	/**
-	 * Returns the value of the '<em><b>Layout</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Layout</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Layout</em>' reference.
-	 * @see #setLayout(Layout)
-	 * @see views.ViewsPackage#getViewGroup_Layout()
-	 * @model required="true"
-	 * @generated
-	 */
-	Layout getLayout();
-
-	/**
-	 * Sets the value of the '{@link views.ViewGroup#getLayout <em>Layout</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Layout</em>' reference.
-	 * @see #getLayout()
-	 * @generated
-	 */
-	void setLayout(Layout value);
 
 } // ViewGroup

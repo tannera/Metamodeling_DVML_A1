@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import views.Association;
@@ -59,7 +58,7 @@ public class ClassImpl extends NamedElementImpl implements views.Class {
 	protected views.Class superclass;
 
 	/**
-	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' reference list.
+	 * The cached value of the '{@link #getAssociation() <em>Association</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAssociation()
@@ -144,7 +143,7 @@ public class ClassImpl extends NamedElementImpl implements views.Class {
 	 */
 	public EList<Association> getAssociation() {
 		if (association == null) {
-			association = new EObjectResolvingEList<Association>(Association.class, this, ViewsPackage.CLASS__ASSOCIATION);
+			association = new EObjectContainmentEList<Association>(Association.class, this, ViewsPackage.CLASS__ASSOCIATION);
 		}
 		return association;
 	}
@@ -159,6 +158,8 @@ public class ClassImpl extends NamedElementImpl implements views.Class {
 		switch (featureID) {
 			case ViewsPackage.CLASS__PROPERTY:
 				return ((InternalEList<?>)getProperty()).basicRemove(otherEnd, msgs);
+			case ViewsPackage.CLASS__ASSOCIATION:
+				return ((InternalEList<?>)getAssociation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

@@ -7,9 +7,15 @@
     xsi:schemaLocation="http://www.example.org/views ../model/views.ecore">
   <class name="Example 1"
       superclass="//@class.1">
-    <property/>
+    <property
+        type="DataType"
+        class="//@class.0"
+        isID="true"/>
   </class>
   <class name="Example 2">
-    <property/>
+    <property
+        type="Enumeration"
+        class="//@class.1"
+        isID="true"/>
   </class>
 </views:DomainModel>

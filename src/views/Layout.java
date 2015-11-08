@@ -35,7 +35,7 @@ public interface Layout extends EObject {
 	 * @see views.LayoutType
 	 * @see #setLayoutType(LayoutType)
 	 * @see views.ViewsPackage#getLayout_LayoutType()
-	 * @model default="HORIZONTAL"
+	 * @model default="HORIZONTAL" required="true"
 	 * @generated
 	 */
 	LayoutType getLayoutType();

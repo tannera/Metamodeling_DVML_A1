@@ -6,15 +6,9 @@
     xmlns:views="http://www.example.org/views"
     xsi:schemaLocation="http://www.example.org/views ../model/views.ecore">
   <viewgroup
-      name="First"
-      welcomeViewGroup="true">
-    <layout
-        href="../src/Layout.xmi#/"/>
-  </viewgroup>
+      name="Test1"
+      welcomeViewGroup="true"/>
   <viewgroup
-      name="Second"
-      welcomeViewGroup="true">
-    <layout
-        href="../src/Layout.xmi#/"/>
-  </viewgroup>
+      name="Test2"
+      welcomeViewGroup="true"/>
 </views:ViewModel>

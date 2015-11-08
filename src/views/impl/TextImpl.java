@@ -21,6 +21,9 @@ import views.ViewsPackage;
  * </p>
  * <ul>
  *   <li>{@link views.impl.TextImpl#getTextType <em>Text Type</em>}</li>
+ *   <li>{@link views.impl.TextImpl#getFormat <em>Format</em>}</li>
+ *   <li>{@link views.impl.TextImpl#isIsShort <em>Is Short</em>}</li>
+ *   <li>{@link views.impl.TextImpl#isIsLong <em>Is Long</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +48,66 @@ public class TextImpl extends PropertyElementsImpl implements Text {
 	 * @ordered
 	 */
 	protected TextType textType = TEXT_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FORMAT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected String format = FORMAT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsShort() <em>Is Short</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsShort()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_SHORT_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsShort() <em>Is Short</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsShort()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isShort = IS_SHORT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isIsLong() <em>Is Long</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsLong()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_LONG_EDEFAULT = false;
+
+	/**
+	 * The cached value of the '{@link #isIsLong() <em>Is Long</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsLong()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isLong = IS_LONG_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +154,80 @@ public class TextImpl extends PropertyElementsImpl implements Text {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFormat() {
+		return format;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormat(String newFormat) {
+		String oldFormat = format;
+		format = newFormat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ViewsPackage.TEXT__FORMAT, oldFormat, format));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsShort() {
+		return isShort;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsShort(boolean newIsShort) {
+		boolean oldIsShort = isShort;
+		isShort = newIsShort;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ViewsPackage.TEXT__IS_SHORT, oldIsShort, isShort));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isIsLong() {
+		return isLong;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsLong(boolean newIsLong) {
+		boolean oldIsLong = isLong;
+		isLong = newIsLong;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ViewsPackage.TEXT__IS_LONG, oldIsLong, isLong));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ViewsPackage.TEXT__TEXT_TYPE:
 				return getTextType();
+			case ViewsPackage.TEXT__FORMAT:
+				return getFormat();
+			case ViewsPackage.TEXT__IS_SHORT:
+				return isIsShort();
+			case ViewsPackage.TEXT__IS_LONG:
+				return isIsLong();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +242,15 @@ public class TextImpl extends PropertyElementsImpl implements Text {
 		switch (featureID) {
 			case ViewsPackage.TEXT__TEXT_TYPE:
 				setTextType((TextType)newValue);
+				return;
+			case ViewsPackage.TEXT__FORMAT:
+				setFormat((String)newValue);
+				return;
+			case ViewsPackage.TEXT__IS_SHORT:
+				setIsShort((Boolean)newValue);
+				return;
+			case ViewsPackage.TEXT__IS_LONG:
+				setIsLong((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +267,15 @@ public class TextImpl extends PropertyElementsImpl implements Text {
 			case ViewsPackage.TEXT__TEXT_TYPE:
 				setTextType(TEXT_TYPE_EDEFAULT);
 				return;
+			case ViewsPackage.TEXT__FORMAT:
+				setFormat(FORMAT_EDEFAULT);
+				return;
+			case ViewsPackage.TEXT__IS_SHORT:
+				setIsShort(IS_SHORT_EDEFAULT);
+				return;
+			case ViewsPackage.TEXT__IS_LONG:
+				setIsLong(IS_LONG_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +290,12 @@ public class TextImpl extends PropertyElementsImpl implements Text {
 		switch (featureID) {
 			case ViewsPackage.TEXT__TEXT_TYPE:
 				return textType != TEXT_TYPE_EDEFAULT;
+			case ViewsPackage.TEXT__FORMAT:
+				return FORMAT_EDEFAULT == null ? format != null : !FORMAT_EDEFAULT.equals(format);
+			case ViewsPackage.TEXT__IS_SHORT:
+				return isShort != IS_SHORT_EDEFAULT;
+			case ViewsPackage.TEXT__IS_LONG:
+				return isLong != IS_LONG_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +312,12 @@ public class TextImpl extends PropertyElementsImpl implements Text {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (textType: ");
 		result.append(textType);
+		result.append(", format: ");
+		result.append(format);
+		result.append(", isShort: ");
+		result.append(isShort);
+		result.append(", isLong: ");
+		result.append(isLong);
 		result.append(')');
 		return result.toString();
 	}

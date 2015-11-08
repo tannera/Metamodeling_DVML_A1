@@ -21,6 +21,7 @@ import views.ViewsPackage;
  * </p>
  * <ul>
  *   <li>{@link views.impl.DateTimePickerImpl#getDateType <em>Date Type</em>}</li>
+ *   <li>{@link views.impl.DateTimePickerImpl#getFormat <em>Format</em>}</li>
  * </ul>
  *
  * @generated
@@ -45,6 +46,26 @@ public class DateTimePickerImpl extends PropertyElementsImpl implements DateTime
 	 * @ordered
 	 */
 	protected DateType dateType = DATE_TYPE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FORMAT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFormat() <em>Format</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFormat()
+	 * @generated
+	 * @ordered
+	 */
+	protected String format = FORMAT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +112,34 @@ public class DateTimePickerImpl extends PropertyElementsImpl implements DateTime
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFormat() {
+		return format;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFormat(String newFormat) {
+		String oldFormat = format;
+		format = newFormat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ViewsPackage.DATE_TIME_PICKER__FORMAT, oldFormat, format));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ViewsPackage.DATE_TIME_PICKER__DATE_TYPE:
 				return getDateType();
+			case ViewsPackage.DATE_TIME_PICKER__FORMAT:
+				return getFormat();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +154,9 @@ public class DateTimePickerImpl extends PropertyElementsImpl implements DateTime
 		switch (featureID) {
 			case ViewsPackage.DATE_TIME_PICKER__DATE_TYPE:
 				setDateType((DateType)newValue);
+				return;
+			case ViewsPackage.DATE_TIME_PICKER__FORMAT:
+				setFormat((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +173,9 @@ public class DateTimePickerImpl extends PropertyElementsImpl implements DateTime
 			case ViewsPackage.DATE_TIME_PICKER__DATE_TYPE:
 				setDateType(DATE_TYPE_EDEFAULT);
 				return;
+			case ViewsPackage.DATE_TIME_PICKER__FORMAT:
+				setFormat(FORMAT_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +190,8 @@ public class DateTimePickerImpl extends PropertyElementsImpl implements DateTime
 		switch (featureID) {
 			case ViewsPackage.DATE_TIME_PICKER__DATE_TYPE:
 				return dateType != DATE_TYPE_EDEFAULT;
+			case ViewsPackage.DATE_TIME_PICKER__FORMAT:
+				return FORMAT_EDEFAULT == null ? format != null : !FORMAT_EDEFAULT.equals(format);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -156,6 +208,8 @@ public class DateTimePickerImpl extends PropertyElementsImpl implements DateTime
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (dateType: ");
 		result.append(dateType);
+		result.append(", format: ");
+		result.append(format);
 		result.append(')');
 		return result.toString();
 	}

@@ -32,7 +32,7 @@ public interface NamedElement extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see views.ViewsPackage#getNamedElement_Name()
-	 * @model dataType="org.eclipse.emf.ecore.xml.type.String"
+	 * @model
 	 * @generated
 	 */
 	String getName();

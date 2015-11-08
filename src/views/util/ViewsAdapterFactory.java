@@ -206,14 +206,6 @@ public class ViewsAdapterFactory extends AdapterFactoryImpl {
 				return createEnumerationLiteralItemAdapter();
 			}
 			@Override
-			public Adapter caseLong(views.Long object) {
-				return createLongAdapter();
-			}
-			@Override
-			public Adapter caseShort(views.Short object) {
-				return createShortAdapter();
-			}
-			@Override
 			public Adapter caseDomainModel(DomainModel object) {
 				return createDomainModelAdapter();
 			}
@@ -630,34 +622,6 @@ public class ViewsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createEnumerationLiteralItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link views.Long <em>Long</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see views.Long
-	 * @generated
-	 */
-	public Adapter createLongAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link views.Short <em>Short</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see views.Short
-	 * @generated
-	 */
-	public Adapter createShortAdapter() {
 		return null;
 	}
 

@@ -3,9 +3,6 @@
 package views.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import views.Create;
 import views.ViewsPackage;
 
@@ -16,7 +13,7 @@ import views.ViewsPackage;
  *
  * @generated
  */
-public class CreateImpl extends MinimalEObjectImpl.Container implements Create {
+public class CreateImpl extends ClassOperationViewImpl implements Create {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
