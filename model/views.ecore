@@ -86,10 +86,22 @@
         upperBound="-1" eType="#//SelectionItems" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//TextType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComparisonConditions" eSuperTypes="#//VisibilityCondition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComparisonConditions" eSuperTypes="#//VisibilityCondition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="comparison" eType="#//ComparisonValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewelements" eType="#//ViewElements"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeConditions" eSuperTypes="#//VisibilityCondition">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="ComposedConditionTypesAreEqual"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="ComposedConditionTypesAreEqual" value="self.visibilitycondition -> forAll(c | c.conditionType = self.conditionType)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="compositeType" eType="#//CompositeConditionsType"
         defaultValueLiteral="AND"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visibilitycondition" lowerBound="2"
+        upperBound="2" eType="#//VisibilityCondition" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="List" eSuperTypes="#//AssociationElements"/>
   <eClassifiers xsi:type="ecore:EClass" name="Create"/>
@@ -168,11 +180,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="ClassNotInheritSelf ExactlyOneClassID"/>
+      <details key="constraints" value="ClassNotInheritSelf ExactlyOneClassID classPropertyIDLowerBoundOne"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="ClassNotInheritSelf" value="self.superclass->excludes(self)"/>
       <details key="ExactlyOneClassID" value="self.Property -> select(k | k.isID=true)-> size() = 1"/>
+      <details key="classPropertyIDLowerBoundOne" value="(self.property->select(p | p.isID)).LowerBound = 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
         upperBound="-1" eType="#//Property" containment="true"/>
@@ -197,9 +210,9 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//PropertyType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="LowerBound" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="0"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UpperBound" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="1"/>
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" defaultValueLiteral="1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -228,5 +241,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ComparisonValue">
+    <eLiterals name="Equal to"/>
+    <eLiterals name="Less than" value="1"/>
+    <eLiterals name="Greater than" value="2"/>
   </eClassifiers>
 </ecore:EPackage>

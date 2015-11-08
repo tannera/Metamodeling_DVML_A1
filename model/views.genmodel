@@ -34,6 +34,11 @@
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//PropertyType/DataType"/>
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//PropertyType/Enumeration"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//ComparisonValue">
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Equal%20to"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Less%20than"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Greater%20than"/>
+    </genEnums>
     <genClasses ecoreClass="views.ecore#//View">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//View/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//View/header"/>
@@ -77,9 +82,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//Selection/selectionitems"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//Selection/type"/>
     </genClasses>
-    <genClasses ecoreClass="views.ecore#//ComparisonConditions"/>
+    <genClasses ecoreClass="views.ecore#//ComparisonConditions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ComparisonConditions/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//ComparisonConditions/comparison"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference views.ecore#//ComparisonConditions/viewelements"/>
+    </genClasses>
     <genClasses ecoreClass="views.ecore#//CompositeConditions">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//CompositeConditions/compositeType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference views.ecore#//CompositeConditions/visibilitycondition"/>
     </genClasses>
     <genClasses ecoreClass="views.ecore#//List"/>
     <genClasses ecoreClass="views.ecore#//Create"/>
