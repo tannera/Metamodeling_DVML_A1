@@ -168,10 +168,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Class" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="ClassNotInheritSelf"/>
+      <details key="constraints" value="ClassNotInheritSelf ExactlyOneClassID"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="ClassNotInheritSelf" value="self.superclass->excludes(self)"/>
+      <details key="ExactlyOneClassID" value="self.Property -> select(k | k.isID=true)-> size() = 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
         upperBound="-1" eType="#//Property" containment="true"/>
@@ -186,21 +187,21 @@
   <eClassifiers xsi:type="ecore:EClass" name="DataType" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="Property" eSuperTypes="#//NamedElement">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="LowerBoundMaxOne LowerBoundMinZero UpperBoundEqualsOne"/>
+      <details key="constraints" value="LowerBoundMaxOne LowerBoundMinZero UpperBoundEqualsOne ClassPropertyTypeIsValid"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="LowerBoundMaxOne" value="self.LowerBound &lt;= 1"/>
       <details key="LowerBoundMinZero" value="self.LowerBound >= 0"/>
       <details key="UpperBoundEqualsOne" value="self.UpperBound = 1"/>
+      <details key="ClassPropertyTypeIsValid" value="self.type = PropertyType::DataType or self.type = PropertyType::Enumeration"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//PropertyType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="LowerBound" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="0"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="UpperBound" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int" defaultValueLiteral="1"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="class" eType="#//Class"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
-        defaultValueLiteral="false" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PropertyType">
     <eLiterals name="Class"/>
