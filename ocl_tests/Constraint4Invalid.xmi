@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:ElementGroups
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:views="http://www.example.org/views"
+    xsi:schemaLocation="http://www.example.org/views ../model/views.ecore">
+  <visibilitycondition
+      xsi:type="views:CompositeConditions">
+    <visibilitycondition
+        xsi:type="views:ComparisonConditions"
+        conditionID="1"
+        conditionType="hidden"
+        value="test"/>
+    <visibilitycondition
+        xsi:type="views:ComparisonConditions"
+        conditionID="2"
+        value="test"/>
+  </visibilitycondition>
+  <layout href="../src/Layout.xmi#/"/>
+</views:ElementGroups>

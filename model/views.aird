@@ -16,6 +16,12 @@
   <semanticResources>../ocl_tests/Constraint8Valid.xmi</semanticResources>
   <semanticResources>DomainModel1.xmi</semanticResources>
   <semanticResources>../ocl_tests/Constraint7Invalid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint5Valid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint5Invalid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint6Valid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint6Invalid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint4Invalid.xmi</semanticResources>
+  <semanticResources>../ocl_tests/Constraint4Valid.xmi</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_kqQuIH1_EeWkJtUBs9a44A">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_kyeO8H1_EeWkJtUBs9a44A" name="views">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_kyeO8X1_EeWkJtUBs9a44A" source="DANNOTATION_CUSTOMIZATION_KEY">
