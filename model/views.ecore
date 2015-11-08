@@ -12,11 +12,10 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="View" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase NameInViewIsNotEmpty"/>
+      <details key="constraints" value="FirstLetterInViewTitleIsUpperCase"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="FirstLetterInViewTitleIsUpperCase" value="self.name.at(1).matches('[A-Z]')"/>
-      <details key="NameInViewIsNotEmpty" value="self.name.size() &lt;> 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="header" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -78,6 +77,12 @@
         eType="#//TextType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateTimePicker" eSuperTypes="#//PropertyElements">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="DateIsValid"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="DateIsValid" value="self.dateType = PropertyType::DataType"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateType" lowerBound="1"
         eType="#//DateType"/>
   </eClassifiers>
