@@ -35,9 +35,9 @@
       <genEnumLiterals ecoreEnumLiteral="views.ecore#//PropertyType/Enumeration"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="views.ecore#//ComparisonValue">
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Equal%20to"/>
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Less%20than"/>
-      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Greater%20than"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/Equals"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/LessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="views.ecore#//ComparisonValue/GreaterThan"/>
     </genEnums>
     <genClasses ecoreClass="views.ecore#//View">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute views.ecore#//View/name"/>

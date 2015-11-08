@@ -184,7 +184,7 @@
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="ClassNotInheritSelf" value="self.superclass->excludes(self)"/>
-      <details key="ExactlyOneClassID" value="self.Property -> select(k | k.isID=true)-> size() = 1"/>
+      <details key="ExactlyOneClassID" value=" (self.Property -> select(k | k.isID=true)-> size() = 1) or (self.superclass -> size() > 0)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="property" lowerBound="1"
         upperBound="-1" eType="#//Property" containment="true"/>
@@ -232,7 +232,7 @@
       <details key="constraints" value="associationEndUpperGreaterThanLower"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="associationEndUpperGreaterThanLower" value="self.LowerBound &lt;= self.UpperBound and (self.LowerBound >= 0 and self.UpperBound > 0)"/>
+      <details key="associationEndUpperGreaterThanLower" value="self.LowerBound &lt;= self.UpperBound or self.UpperBound = -1 and (self.LowerBound >= 0 and self.UpperBound > 0 or self.UpperBound = -1)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="class" lowerBound="1" eType="#//Class"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="navigable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
@@ -248,8 +248,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ComparisonValue">
-    <eLiterals name="Equal to"/>
-    <eLiterals name="Less than" value="1"/>
-    <eLiterals name="Greater than" value="2"/>
+    <eLiterals name="Equals"/>
+    <eLiterals name="LessThan" value="1"/>
+    <eLiterals name="GreaterThan" value="2"/>
   </eClassifiers>
 </ecore:EPackage>
